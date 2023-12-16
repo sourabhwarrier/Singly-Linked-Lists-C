@@ -1,7 +1,21 @@
+/**
+ * @file sllist.c
+ * @author Sourabh Warrier
+ * @date Saturday December 16th, 2023
+ * @brief This file contains the definitions for all the functions fo performing certain rudimentary list operations. 
+ * Some unusual features such as the time to live attribute (ttl) have also been implemented. 
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "sllist.h"
 
+
+/**
+ * Displays the contents of a list
+ * @param pointer to a node, usually the head node of a list.
+ * @return void
+*/
 void display(Node* head){
     Node* current = head;
     int index = 0;
@@ -15,6 +29,13 @@ void display(Node* head){
     return;
 }
 
+/**
+ * Attach a node with a new value to the beginning of a list.
+ * This operation changes the head node of the list.
+ * @param pointer to head node
+ * @param new value to be attached of type int.
+ * @return pointer to next node.
+*/
 Node* attach(Node* head, int new_value){
     Node* new_node = calloc(1,sizeof(Node));
     new_node->value = new_value;

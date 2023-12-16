@@ -1,0 +1,103 @@
+\doxysection{sllist.\+c File Reference}
+\hypertarget{sllist_8c}{}\label{sllist_8c}\index{sllist.c@{sllist.c}}
+
+
+This file contains the definitions for all the functions fo performing certain rudimentary list operations. Some uncommon features such as the time to live attribute (ttl) have also been implemented.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}sllist.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sllist_8c_a619920e32f856408625123492ef828bd}{display}} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head)
+\item 
+\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sllist_8c_a0d910d1026991ace61ce0ab2f122ed56}{attach}} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head, int new\+\_\+value)
+\item 
+\Hypertarget{sllist_8c_a926c38b124362ed2a4e52ad40364101c}\label{sllist_8c_a926c38b124362ed2a4e52ad40364101c} 
+\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries append} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head, int new\+\_\+value)
+\item 
+\Hypertarget{sllist_8c_a8f3968f1aeae51493c3abb2efd00352d}\label{sllist_8c_a8f3968f1aeae51493c3abb2efd00352d} 
+\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries drop\+\_\+head} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head)
+\item 
+\Hypertarget{sllist_8c_a96268a5ab43d3ed7b0a06370bb0a3a3a}\label{sllist_8c_a96268a5ab43d3ed7b0a06370bb0a3a3a} 
+\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries drop\+\_\+tail} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head)
+\item 
+\Hypertarget{sllist_8c_afe5895be3b9dbcb416501df58219aa8b}\label{sllist_8c_afe5895be3b9dbcb416501df58219aa8b} 
+int {\bfseries length} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head)
+\item 
+\Hypertarget{sllist_8c_a9915f7292e9b51a1bb84332e2dc5468f}\label{sllist_8c_a9915f7292e9b51a1bb84332e2dc5468f} 
+int {\bfseries present} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head, int target)
+\item 
+\Hypertarget{sllist_8c_ac37adafe45663700577eea839fdbde45}\label{sllist_8c_ac37adafe45663700577eea839fdbde45} 
+int {\bfseries count} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head, int target)
+\item 
+\Hypertarget{sllist_8c_a53a1069e429315442e6dd071e0175e50}\label{sllist_8c_a53a1069e429315442e6dd071e0175e50} 
+void {\bfseries replace} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head, int target, int new\+\_\+value, int ttl)
+\item 
+\Hypertarget{sllist_8c_a41d63fdad4bc510e8a425ef76f41eeb4}\label{sllist_8c_a41d63fdad4bc510e8a425ef76f41eeb4} 
+\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries drop\+\_\+matches} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head, int target, int ttl)
+\item 
+\Hypertarget{sllist_8c_a9c843a08f7e52d3cb23264372abda0bd}\label{sllist_8c_a9c843a08f7e52d3cb23264372abda0bd} 
+\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries join} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head1, \mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head2)
+\item 
+\Hypertarget{sllist_8c_a49a6b7e6e893c876bbfe2a6d966e32b5}\label{sllist_8c_a49a6b7e6e893c876bbfe2a6d966e32b5} 
+\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries reverse} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head, int ttl)
+\item 
+\Hypertarget{sllist_8c_a6c876b85295a14b19f5e704a5627532a}\label{sllist_8c_a6c876b85295a14b19f5e704a5627532a} 
+void {\bfseries sort} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head)
+\item 
+\Hypertarget{sllist_8c_a4b6d8fb1c746238e1a0d37a5b567b45a}\label{sllist_8c_a4b6d8fb1c746238e1a0d37a5b567b45a} 
+void {\bfseries drop\+\_\+duplicates} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head, int max\+\_\+duplicates)
+\item 
+\Hypertarget{sllist_8c_a54d751dc32f0e0f69fd003de1954b7a0}\label{sllist_8c_a54d751dc32f0e0f69fd003de1954b7a0} 
+void {\bfseries del} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head)
+\item 
+\Hypertarget{sllist_8c_a31dede6248f8ac85b82f4ffd562eeb0d}\label{sllist_8c_a31dede6248f8ac85b82f4ffd562eeb0d} 
+\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries insert\+\_\+after} (\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}head, int target, int new\+\_\+value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definitions for all the functions fo performing certain rudimentary list operations. Some uncommon features such as the time to live attribute (ttl) have also been implemented. 
+
+\begin{DoxyAuthor}{Author}
+Sourabh Warrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Saturday December 16th, 2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{sllist_8c_a0d910d1026991ace61ce0ab2f122ed56}\label{sllist_8c_a0d910d1026991ace61ce0ab2f122ed56} 
+\index{sllist.c@{sllist.c}!attach@{attach}}
+\index{attach@{attach}!sllist.c@{sllist.c}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*} attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+Attach a node with a new value to the beginning of a list. This operation changes the head node of the list. 
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to head node \\
+\hline
+{\em new} & value to be attached of type int. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to next node. 
+\end{DoxyReturn}
+\Hypertarget{sllist_8c_a619920e32f856408625123492ef828bd}\label{sllist_8c_a619920e32f856408625123492ef828bd} 
+\index{sllist.c@{sllist.c}!display@{display}}
+\index{display@{display}!sllist.c@{sllist.c}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}} \texorpdfstring{$\ast$}{*}}]{head }\end{DoxyParamCaption})}
+
+Displays the contents of a list 
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to a node, usually the head node of a list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

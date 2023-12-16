@@ -1,5 +1,5 @@
 /**
- * Singly Linked List Library
+ * Singly Linked List
  * @file sllist.h
  * @author Sourabh Warrier
  * @date Saturday December 16th, 2023

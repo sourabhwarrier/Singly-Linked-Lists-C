@@ -1,0 +1,27 @@
+\doxysection{sllist.\+h}
+\hypertarget{sllist_8h_source}{}\label{sllist_8h_source}\mbox{\hyperlink{sllist_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnode}{node}}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}};\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnode}{node}}*\ \mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};\ }
+\DoxyCodeLine{00016\ \}\ \mbox{\hyperlink{sllist_8h_ac09cf950484bd9550d14d602b0e5e7fb}{Node}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8h_a619920e32f856408625123492ef828bd}{display}}(\mbox{\hyperlink{structnode}{Node}}*\ head);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ length(\mbox{\hyperlink{structnode}{Node}}*\ head);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ present(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target);}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ count(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ replace(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target,\ \textcolor{keywordtype}{int}\ new\_value,\ \textcolor{keywordtype}{int}\ ttl);}
+\DoxyCodeLine{00023\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8h_a0d910d1026991ace61ce0ab2f122ed56}{attach}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ new\_value);}
+\DoxyCodeLine{00024\ \mbox{\hyperlink{structnode}{Node}}*\ append(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ new\_value);}
+\DoxyCodeLine{00025\ \mbox{\hyperlink{structnode}{Node}}*\ drop\_head(\mbox{\hyperlink{structnode}{Node}}*\ head);}
+\DoxyCodeLine{00026\ \mbox{\hyperlink{structnode}{Node}}*\ drop\_tail(\mbox{\hyperlink{structnode}{Node}}*\ head);}
+\DoxyCodeLine{00027\ \mbox{\hyperlink{structnode}{Node}}*\ drop\_matches(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target,\ \textcolor{keywordtype}{int}\ ttl);}
+\DoxyCodeLine{00028\ \mbox{\hyperlink{structnode}{Node}}*\ join(\mbox{\hyperlink{structnode}{Node}}*\ head1,\ \mbox{\hyperlink{structnode}{Node}}*\ head2);}
+\DoxyCodeLine{00029\ \mbox{\hyperlink{structnode}{Node}}*\ reverse(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ ttl);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ sort(\mbox{\hyperlink{structnode}{Node}}*\ head);}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ drop\_duplicates(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ max\_duplicates);}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{structnode}{Node}}\ *\ insert\_after(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target,\ \textcolor{keywordtype}{int}\ new\_value);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ del(\mbox{\hyperlink{structnode}{Node}}*\ head);}
+
+\end{DoxyCode}
