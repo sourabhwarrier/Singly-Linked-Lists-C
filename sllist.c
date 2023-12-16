@@ -263,7 +263,7 @@ void drop_duplicates(Node* head, int max_duplicates){
     return;
 }
 
-void delete(Node* head){
+void del(Node* head){
     Node* current = head;
     while(head != NULL){
         current = head;

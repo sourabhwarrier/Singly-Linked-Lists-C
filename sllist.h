@@ -18,4 +18,4 @@ Node* reverse(Node* head, int ttl);
 void sort(Node* head);
 void drop_duplicates(Node* head, int max_duplicates);
 Node * insert_after(Node* head, int target, int new_value);
-void delete(Node* head);
+void del(Node* head);
