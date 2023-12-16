@@ -8,7 +8,7 @@
 
 /**
  * Type Node stores a value and a pointer to the next node in the list.
- * The node with next = NULL pointer marks the end of the list.
+ * The node whose next pointer is NULL marks the end of the list.
 */
 typedef struct node{
     int value; /**< Value stored in the node*/

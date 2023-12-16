@@ -5,15 +5,13 @@
  * @brief This file contains the definitions for all the functions fo performing certain rudimentary list operations. 
  * Some unusual features such as the time to live attribute (ttl) have also been implemented. 
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "sllist.h"
 
-
 /**
  * Displays the contents of a list
- * @param pointer to a node, usually the head node of a list.
+ * @param Node* head : pointer to a node, usually the head node of a list.
  * @return void
 */
 void display(Node* head){
@@ -30,11 +28,10 @@ void display(Node* head){
 }
 
 /**
- * Attach a node with a new value to the beginning of a list.
- * This operation changes the head node of the list.
- * @param pointer to head node
- * @param new value to be attached of type int.
- * @return pointer to next node.
+ * Attach a node with a new value to the beginning of a list. This node becomes the new head.
+ * @param Node* head : pointer to the head node of a list
+ * @param int new_value : value to be attached
+ * @return (Node*) pointer to the head node
 */
 Node* attach(Node* head, int new_value){
     Node* new_node = calloc(1,sizeof(Node));
@@ -45,6 +42,12 @@ Node* attach(Node* head, int new_value){
     return new_node;
 }
 
+/**
+ * Append a node with a new value to the end of a list.
+ * @param Node* head : pointer to the head node of a list
+ * @param int new_value : value to be appended
+ * @return (Node*) pointer to the head node
+*/
 Node* append(Node* head, int new_value){
     Node* new_node = calloc(1,sizeof(Node));
     new_node->value = new_value;
@@ -61,6 +64,11 @@ Node* append(Node* head, int new_value){
     return head;
 }
 
+/**
+ * Remove the head node from a list. The next node in the list becomes the new head.
+ * @param Node* head : pointer to the head of a list
+ * @return (Node*) pointer to the next node in the list or a NULL pointer in the case of a singleton or empty list 
+*/
 Node* drop_head(Node* head){
     if (head != NULL){
         Node* head_prev = head;
@@ -70,6 +78,11 @@ Node* drop_head(Node* head){
     return head;
 }
 
+/**
+ * Remove the last node in a list.
+ * @param Node* head : pointer to the head node of a list
+ * @return (Node*) pointer to the head node
+*/
 Node* drop_tail(Node* head){
     if(head == NULL){
         return head;
@@ -90,7 +103,11 @@ Node* drop_tail(Node* head){
     }
     return head;
 }
-
+/**
+ * Obtain the length of a list.
+ * @param Node* head : pointer to the head node of a list
+ * @return (int) length of the list
+*/
 int length(Node* head){
     int len = 0;
     Node* current = head;
@@ -101,6 +118,12 @@ int length(Node* head){
     return len;
 }
 
+/**
+ * Determine whether a node with a given value is present in the list.
+ * @param Node* head : pointer to the head node of a list
+ * @param int target : value to find
+ * @return (int) 1 if present, 0 otherwise
+*/
 int present(Node* head, int target){
     int found = 0;
     Node* current = head;
@@ -114,6 +137,12 @@ int present(Node* head, int target){
     return found;
 }
 
+/**
+ * Count the number occurrences of nodes with a given value in the list
+ * @param Node* head : pointer to the head node of a list
+ * @param int target : value whose occurrences to count
+ * @return (int) number of occurrences
+*/
 int count(Node* head, int target){
     int count = 0;
     Node* current = head;
@@ -126,6 +155,14 @@ int count(Node* head, int target){
     return count;
 }
 
+/**
+ * Replace first n nodes of a given value with a new value. The number of replacements is specified by the parameter ttl.
+ * @param Node* head : pointer to the head node of a list
+ * @param int target : value that is to be replaced
+ * @param int new_value : new value
+ * @param int ttl : maximum number of replacements to be made
+ * @return void
+*/
 void replace(Node* head, int target, int new_value, int ttl){
     int flag = (ttl > 0);
     Node* current = head;
@@ -141,6 +178,13 @@ void replace(Node* head, int target, int new_value, int ttl){
     return;
 }
 
+/**
+ * Remove the first n nodes with a given value.
+ * @param Node* head : pointer to the head node of a list
+ * @param int target : value to be matched and removed
+ * @param int ttl : maximum of number of removals to be made
+ * @return (Node*) pointer to the head node
+*/
 Node* drop_matches(Node* head, int target, int ttl){
     int flag = (ttl > 0);
     Node* current = head;
