@@ -1,6 +1,18 @@
+/**
+ * Singly Linked List Library
+ * @file sllist.h
+ * @author Sourabh Warrier
+ * @date Saturday December 16th, 2023
+*/
+
+
+/**
+ * Type Node stores a value and a pointer to the next node in the list.
+ * The node with next = NULL pointer marks the end of the list.
+*/
 typedef struct node{
-    int value;
-    struct node* next;
+    int value; /**< Value stored in the node*/
+    struct node* next; /**< Pointer to the next node*/
 } Node;
 
 void display(Node* head);
