@@ -230,6 +230,12 @@ Node* drop_matches(Node* head, int target, int ttl){
     return head;
 }
 
+/**
+ * Join two lists by appending the head of the second list to the tail of the first.
+ * @param Node* head1 : pointer to the head node of the first list
+ * @param Node* head2 : pointer to the head node of the second list
+ * @return (Node*) pointer to the head node
+*/
 Node* join(Node* head1, Node* head2){
     if(head1 == NULL){
         return head2;
@@ -247,6 +253,12 @@ Node* join(Node* head1, Node* head2){
     return head1;
 }
 
+/**
+ * Reverse the first n nodes in a list
+ * @param Node* head : pointer to the head node of a list
+ * @param int ttl : length of first segment to be reversed
+ * @return (Node*) pointer to the head node
+*/
 Node* reverse(Node* head, int ttl){
    int flag = (ttl > 0);
     Node* current = head;
