@@ -286,6 +286,11 @@ Node* reverse(Node* head, int ttl){
     return current;
 }
 
+/**
+ * Sorts the nodes in a list by value in ascending order.
+ * @param Node* head : pointer to the head node of a list
+ * @return void
+*/
 void sort(Node* head){      //IMPLEMENTS BUBBLE SORT
     if (head == NULL){
         return;
@@ -309,6 +314,12 @@ void sort(Node* head){      //IMPLEMENTS BUBBLE SORT
     return;
 }
 
+/**
+ * Remove duplicate nodes in a list, retaining a given number of copies.
+ * @param Node* head : pointer to the head node of a list
+ * @param int max_duplicates : maximum number of copies to retain
+ * @return void
+*/
 void drop_duplicates(Node* head, int max_duplicates){
     int flag = (max_duplicates > 0);
     Node* current = head;
@@ -340,6 +351,11 @@ void drop_duplicates(Node* head, int max_duplicates){
     return;
 }
 
+/**
+ * Deletes a list from memory.
+ * @param Node* head : pointer to the head node of a list
+ * @return void
+*/
 void del(Node* head){
     Node* current = head;
     while(head != NULL){
@@ -350,6 +366,13 @@ void del(Node* head){
     return;
 }
 
+/**
+ * Inserts a node with a new value after the first occurrence of a node with a given value.
+ * @param Node* head : pointer to the head node of a list
+ * @param int target : value after whose first occurrence a new node is to be inserted
+ * @param int new_value : value of the new node to be inserted
+ * @return (Node*) pointer to the head node
+*/
 Node* insert_after(Node* head, int target, int new_value){
     Node* new_node = (Node*)calloc(1, sizeof(Node));
     Node* current = head;
