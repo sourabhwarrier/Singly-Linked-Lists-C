@@ -287,7 +287,7 @@ Node* reverse(Node* head, int ttl){
 }
 
 /**
- * Sorts the nodes in a list by value in ascending order.
+ * Sort the nodes in a list by value in ascending order.
  * @param Node* head : pointer to the head node of a list
  * @return void
 */
@@ -352,7 +352,7 @@ void drop_duplicates(Node* head, int max_duplicates){
 }
 
 /**
- * Deletes a list from memory.
+ * Delete a list from memory.
  * @param Node* head : pointer to the head node of a list
  * @return void
 */
@@ -367,7 +367,7 @@ void del(Node* head){
 }
 
 /**
- * Inserts a node with a new value after the first occurrence of a node with a given value.
+ * Insert a node with a new value after the first occurrence of a node with a given value.
  * @param Node* head : pointer to the head node of a list
  * @param int target : value after whose first occurrence a new node is to be inserted
  * @param int new_value : value of the new node to be inserted
