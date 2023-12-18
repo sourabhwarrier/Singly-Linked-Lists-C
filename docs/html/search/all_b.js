@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['replace_0',['replace',['../sllist_8c.html#a53a1069e429315442e6dd071e0175e50',1,'replace(Node *head, int target, int new_value, int ttl):&#160;sllist.c'],['../sllist_8h.html#a53a1069e429315442e6dd071e0175e50',1,'replace(Node *head, int target, int new_value, int ttl):&#160;sllist.c']]],
-  ['reverse_1',['reverse',['../sllist_8c.html#a49a6b7e6e893c876bbfe2a6d966e32b5',1,'reverse(Node *head, int ttl):&#160;sllist.c'],['../sllist_8h.html#a49a6b7e6e893c876bbfe2a6d966e32b5',1,'reverse(Node *head, int ttl):&#160;sllist.c']]]
+  ['length_0',['length',['../sllist_8c.html#afe5895be3b9dbcb416501df58219aa8b',1,'length(Node *head):&#160;sllist.c'],['../sllist_8h.html#afe5895be3b9dbcb416501df58219aa8b',1,'length(Node *head):&#160;sllist.c']]],
+  ['library_20in_20c_1',['Linked List Library in C',['../index.html',1,'']]],
+  ['linked_20list_20library_20in_20c_2',['Linked List Library in C',['../index.html',1,'']]],
+  ['list_20library_20in_20c_3',['Linked List Library in C',['../index.html',1,'']]],
+  ['list_20structure_4',['List Structure',['../index.html#autotoc_md1',1,'']]]
 ];

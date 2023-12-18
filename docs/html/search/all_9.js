@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sllist_2ec_0',['sllist.c',['../sllist_8c.html',1,'']]],
-  ['sllist_2eh_1',['sllist.h',['../sllist_8h.html',1,'']]],
-  ['sort_2',['sort',['../sllist_8c.html#a6c876b85295a14b19f5e704a5627532a',1,'sort(Node *head):&#160;sllist.c'],['../sllist_8h.html#a6c876b85295a14b19f5e704a5627532a',1,'sort(Node *head):&#160;sllist.c']]]
+  ['in_20c_0',['Linked List Library in C',['../index.html',1,'']]],
+  ['insert_5fafter_1',['insert_after',['../sllist_8c.html#a31dede6248f8ac85b82f4ffd562eeb0d',1,'insert_after(Node *head, int target, int new_value):&#160;sllist.c'],['../sllist_8h.html#a31dede6248f8ac85b82f4ffd562eeb0d',1,'insert_after(Node *head, int target, int new_value):&#160;sllist.c']]]
 ];

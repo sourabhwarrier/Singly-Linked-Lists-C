@@ -1,5 +1,7 @@
 \doxysection{sllist.\+h File Reference}
 \hypertarget{sllist_8h}{}\label{sllist_8h}\index{sllist.h@{sllist.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -48,7 +50,7 @@ void \mbox{\hyperlink{sllist_8h_a54d751dc32f0e0f69fd003de1954b7a0}{del}} (\mbox{
 
 
 \doxysubsection{Detailed Description}
-Singly Linked List Header File
+Header File
 
 \begin{DoxyAuthor}{Author}
 Sourabh Warrier 
@@ -56,6 +58,10 @@ Sourabh Warrier
 \begin{DoxyDate}{Date}
 Saturday December 16th, 2023 
 \end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{sllist_8h_source}{sllist.\+h}}.
+
 
 
 \doxysubsection{Typedef Documentation}
@@ -84,6 +90,10 @@ Append a node with a new value to the end of a list.
 \begin{DoxyReturn}{Returns}
 (Node\texorpdfstring{$\ast$}{*}) pointer to the head node 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00052}{52}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a0d910d1026991ace61ce0ab2f122ed56}\label{sllist_8h_a0d910d1026991ace61ce0ab2f122ed56} 
 \index{sllist.h@{sllist.h}!attach@{attach}}
 \index{attach@{attach}!sllist.h@{sllist.h}}
@@ -100,6 +110,10 @@ Attach a node with a new value to the beginning of a list. This node becomes the
 \begin{DoxyReturn}{Returns}
 (Node\texorpdfstring{$\ast$}{*}) pointer to the head node 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00037}{37}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_ac37adafe45663700577eea839fdbde45}\label{sllist_8h_ac37adafe45663700577eea839fdbde45} 
 \index{sllist.h@{sllist.h}!count@{count}}
 \index{count@{count}!sllist.h@{sllist.h}}
@@ -116,6 +130,12 @@ Count the number occurrences of nodes with a given value in the list
 \begin{DoxyReturn}{Returns}
 (int) number of occurrences 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00147}{147}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 1
 \Hypertarget{sllist_8h_a54d751dc32f0e0f69fd003de1954b7a0}\label{sllist_8h_a54d751dc32f0e0f69fd003de1954b7a0} 
 \index{sllist.h@{sllist.h}!del@{del}}
 \index{del@{del}!sllist.h@{sllist.h}}
@@ -130,6 +150,10 @@ Delete a list from memory.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00360}{360}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a619920e32f856408625123492ef828bd}\label{sllist_8h_a619920e32f856408625123492ef828bd} 
 \index{sllist.h@{sllist.h}!display@{display}}
 \index{display@{display}!sllist.h@{sllist.h}}
@@ -144,6 +168,10 @@ Displays the contents of a list
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00018}{18}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a4b6d8fb1c746238e1a0d37a5b567b45a}\label{sllist_8h_a4b6d8fb1c746238e1a0d37a5b567b45a} 
 \index{sllist.h@{sllist.h}!drop\_duplicates@{drop\_duplicates}}
 \index{drop\_duplicates@{drop\_duplicates}!sllist.h@{sllist.h}}
@@ -160,6 +188,10 @@ Remove duplicate nodes in a list, retaining a given number of copies.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00324}{324}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a8f3968f1aeae51493c3abb2efd00352d}\label{sllist_8h_a8f3968f1aeae51493c3abb2efd00352d} 
 \index{sllist.h@{sllist.h}!drop\_head@{drop\_head}}
 \index{drop\_head@{drop\_head}!sllist.h@{sllist.h}}
@@ -174,6 +206,10 @@ Remove the head node from a list. The next node in the list becomes the new head
 \begin{DoxyReturn}{Returns}
 (Node\texorpdfstring{$\ast$}{*}) pointer to the next node in the list or a NULL pointer in the case of a singleton or empty list 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00073}{73}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a41d63fdad4bc510e8a425ef76f41eeb4}\label{sllist_8h_a41d63fdad4bc510e8a425ef76f41eeb4} 
 \index{sllist.h@{sllist.h}!drop\_matches@{drop\_matches}}
 \index{drop\_matches@{drop\_matches}!sllist.h@{sllist.h}}
@@ -192,6 +228,10 @@ Remove the first n nodes with a given value.
 \begin{DoxyReturn}{Returns}
 (Node\texorpdfstring{$\ast$}{*}) pointer to the head node 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00189}{189}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a96268a5ab43d3ed7b0a06370bb0a3a3a}\label{sllist_8h_a96268a5ab43d3ed7b0a06370bb0a3a3a} 
 \index{sllist.h@{sllist.h}!drop\_tail@{drop\_tail}}
 \index{drop\_tail@{drop\_tail}!sllist.h@{sllist.h}}
@@ -206,6 +246,10 @@ Remove the last node in a list.
 \begin{DoxyReturn}{Returns}
 (Node\texorpdfstring{$\ast$}{*}) pointer to the head node 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00087}{87}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a31dede6248f8ac85b82f4ffd562eeb0d}\label{sllist_8h_a31dede6248f8ac85b82f4ffd562eeb0d} 
 \index{sllist.h@{sllist.h}!insert\_after@{insert\_after}}
 \index{insert\_after@{insert\_after}!sllist.h@{sllist.h}}
@@ -224,6 +268,10 @@ Insert a node with a new value after the first occurrence of a node with a given
 \begin{DoxyReturn}{Returns}
 (Node\texorpdfstring{$\ast$}{*}) pointer to the head node 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00377}{377}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a9c843a08f7e52d3cb23264372abda0bd}\label{sllist_8h_a9c843a08f7e52d3cb23264372abda0bd} 
 \index{sllist.h@{sllist.h}!join@{join}}
 \index{join@{join}!sllist.h@{sllist.h}}
@@ -240,6 +288,10 @@ Join two lists by appending the head of the second list to the tail of the first
 \begin{DoxyReturn}{Returns}
 (Node\texorpdfstring{$\ast$}{*}) pointer to the head node 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00240}{240}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_afe5895be3b9dbcb416501df58219aa8b}\label{sllist_8h_afe5895be3b9dbcb416501df58219aa8b} 
 \index{sllist.h@{sllist.h}!length@{length}}
 \index{length@{length}!sllist.h@{sllist.h}}
@@ -254,6 +306,10 @@ Obtain the length of a list.
 \begin{DoxyReturn}{Returns}
 (int) length of the list 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00112}{112}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a9915f7292e9b51a1bb84332e2dc5468f}\label{sllist_8h_a9915f7292e9b51a1bb84332e2dc5468f} 
 \index{sllist.h@{sllist.h}!present@{present}}
 \index{present@{present}!sllist.h@{sllist.h}}
@@ -270,6 +326,10 @@ Determine whether a node with a given value is present in the list.
 \begin{DoxyReturn}{Returns}
 (int) 1 if present, 0 otherwise 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00128}{128}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a53a1069e429315442e6dd071e0175e50}\label{sllist_8h_a53a1069e429315442e6dd071e0175e50} 
 \index{sllist.h@{sllist.h}!replace@{replace}}
 \index{replace@{replace}!sllist.h@{sllist.h}}
@@ -290,6 +350,10 @@ Replace first n nodes of a given value with a new value. The number of replaceme
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00167}{167}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a49a6b7e6e893c876bbfe2a6d966e32b5}\label{sllist_8h_a49a6b7e6e893c876bbfe2a6d966e32b5} 
 \index{sllist.h@{sllist.h}!reverse@{reverse}}
 \index{reverse@{reverse}!sllist.h@{sllist.h}}
@@ -300,12 +364,16 @@ Reverse the first n nodes in a list
 \begin{DoxyParams}{Parameters}
 {\em Node\texorpdfstring{$\ast$}{*}} & head \+: pointer to the head node of a list \\
 \hline
-{\em int} & ttl \+: length of first segment to be reversed \\
+{\em int} & ttl \+: length of initial n-\/node segment to be reversed \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 (Node\texorpdfstring{$\ast$}{*}) pointer to the head node 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00263}{263}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+
 \Hypertarget{sllist_8h_a6c876b85295a14b19f5e704a5627532a}\label{sllist_8h_a6c876b85295a14b19f5e704a5627532a} 
 \index{sllist.h@{sllist.h}!sort@{sort}}
 \index{sort@{sort}!sllist.h@{sllist.h}}
@@ -320,3 +388,7 @@ Sort the nodes in a list by value in ascending order.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sllist_8c_source_l00295}{295}} of file \mbox{\hyperlink{sllist_8c_source}{sllist.\+c}}.
+

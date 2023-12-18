@@ -3,4 +3,153 @@
 \label{index_md_README}%
 \Hypertarget{index_md_README}%
  This is a personal project undertaken to implement {\bfseries{linked lists}} in {\bfseries{C}}, a commonly encountered data structure in the courseware for CS1101 in BS programs (DSA/\+ES) at IIT Madras. ~\newline
+\hypertarget{index_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{List Structure}{List Structure}}\label{index_autotoc_md1}
+\href{https://mermaid.live/edit\#pako:eNp1kD0LwkAMhv9KiItCXex2g-DXVh0UJ88h9FJbvF7L9SqK-t-N1aEgZgpvnuRNcse0MowKT57qHJKtdiAxO2jMmQw8YHgh23IEjq9hpPEI4_EU5lJ30jj5Byy-QNwDNvskeQMfi9RS0yw5A3G-QVZYqwarLqIm-OrMahDHcY-FWYf2lfmPsvgqGGHJvqTCyG33N6Ex5FyyRiWp4zZ4shq1ewpKbah2N5eiCl42xbY2FHhZkAwrUWVkG1HZFKHy68-_urc9XzJIZOI}{\texttt{ }}
+
+The above list structure is implemented using {\bfseries{Nodes}}. A node holds a value and a pointer to the next node.~\newline
+A node is implemented using a struct with members {\itshape value} and {\itshape next}.\hypertarget{index_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{The Node Type}{The Node Type}}\label{index_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{typedef\ struct\ node\{}
+\DoxyCodeLine{\ \ \ \ int\ value;}
+\DoxyCodeLine{\ \ \ \ struct\ node*\ next;}
+\DoxyCodeLine{\}\ Node;}
+
+\end{DoxyCode}
+ The first node in a list is the head node. In this project, nodes reside in the heap.~\newline
+The first node (head) can be created as follows. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Node*\ head\ =\ (Node*)calloc(1,sizeof(Node));}
+
+\end{DoxyCode}
+ or 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Node*\ head;}
+
+\end{DoxyCode}
+ Note that the former places the head node in the heap.\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Examples}{Examples}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxyparagraph{\texorpdfstring{1}{1}}\label{index_autotoc_md4}
+{\bfseries{Getting started}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#include\ <stdio.h>}
+\DoxyCodeLine{\#include\ <stdlib.h>}
+\DoxyCodeLine{\#include\ "{}sllist.h"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{int\ main(void)\{}
+\DoxyCodeLine{\ \ \ \ Node*\ head\ =\ (Node*)calloc(1,sizeof(Node));}
+\DoxyCodeLine{\ \ \ \ display(head);}
+\DoxyCodeLine{\ \ \ \ return\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ {\bfseries{output}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[0]:0\ -\/>\ NULL}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md5}{}\doxyparagraph{\texorpdfstring{2}{2}}\label{index_autotoc_md5}
+{\bfseries{Appending some nodes to a list}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{for\ (int\ i\ =\ 0;i<10;i++)\{}
+\DoxyCodeLine{\ \ \ \ head\ =\ append(head,i*i);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{display(head);}
+
+\end{DoxyCode}
+ {\bfseries{output}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[0]:0\ -\/>\ [1]:0\ -\/>\ [2]:1\ -\/>\ [3]:4\ -\/>\ [4]:9\ -\/>\ [5]:16\ -\/>\ [6]:25\ -\/>\ [7]:36\ -\/>\ [8]:49\ -\/>\ [9]:64\ -\/>\ [10]:81\ -\/>\ NULL}
+
+\end{DoxyCode}
+ Note that the {\bfseries{append}} function has a return type of {\bfseries{Node\texorpdfstring{$\ast$}{*}}}. This is because an empty list can be represented by a NULL pointer too, ~\newline
+ in which case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially ~\newline
+ changes the head node, hence the head pointer is reassigned when the append function is called.\hypertarget{index_autotoc_md6}{}\doxyparagraph{\texorpdfstring{3}{3}}\label{index_autotoc_md6}
+{\bfseries{Dropping duplicate from a list}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{head\ =\ append(head,5);}
+\DoxyCodeLine{head\ =\ append(head,5);}
+\DoxyCodeLine{head\ =\ append(head,7);}
+\DoxyCodeLine{head\ =\ append(head,7);}
+\DoxyCodeLine{head\ =\ append(head,3);}
+\DoxyCodeLine{head\ =\ append(head,5);}
+\DoxyCodeLine{head\ =\ append(head,4);}
+\DoxyCodeLine{head\ =\ append(head,1);}
+\DoxyCodeLine{head\ =\ append(head,8);}
+\DoxyCodeLine{head\ =\ append(head,2);}
+\DoxyCodeLine{}
+\DoxyCodeLine{display(head);}
+\DoxyCodeLine{drop\_duplicates(head,0);}
+\DoxyCodeLine{display(head);}
+
+\end{DoxyCode}
+ {\bfseries{output 1}} (max\+\_\+duplicates = 0) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:5\ -\/>\ [3]:7\ -\/>\ [4]:7\ -\/>\ [5]:3\ -\/>\ [6]:5\ -\/>\ [7]:4\ -\/>\ [8]:1\ -\/>\ [9]:8\ -\/>\ [10]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:4\ -\/>\ [5]:1\ -\/>\ [6]:8\ -\/>\ [7]:2\ -\/>\ NULL}
+
+\end{DoxyCode}
+ The {\bfseries{drop duplicates}} function has a second parameter, {\itshape max\+\_\+duplicates} which specifies the number of extra copies of a value to retain. ~\newline
+ If this value is 0, then all unique values are retained only once and all copies are dropped.
+
+{\bfseries{output 2}} (max\+\_\+duplicates = 1) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:5\ -\/>\ [3]:7\ -\/>\ [4]:7\ -\/>\ [5]:3\ -\/>\ [6]:5\ -\/>\ [7]:4\ -\/>\ [8]:1\ -\/>\ [9]:8\ -\/>\ [10]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:5\ -\/>\ [3]:7\ -\/>\ [4]:7\ -\/>\ [5]:3\ -\/>\ [6]:4\ -\/>\ [7]:1\ -\/>\ [8]:8\ -\/>\ [9]:2\ -\/>\ NULL}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md7}{}\doxyparagraph{\texorpdfstring{4}{4}}\label{index_autotoc_md7}
+{\bfseries{Reversing a list}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{head\ =\ append(head,5);}
+\DoxyCodeLine{head\ =\ append(head,7);}
+\DoxyCodeLine{head\ =\ append(head,3);}
+\DoxyCodeLine{head\ =\ append(head,9);}
+\DoxyCodeLine{head\ =\ append(head,4);}
+\DoxyCodeLine{head\ =\ append(head,1);}
+\DoxyCodeLine{head\ =\ append(head,8);}
+\DoxyCodeLine{head\ =\ append(head,2);}
+\DoxyCodeLine{}
+\DoxyCodeLine{display(head);}
+\DoxyCodeLine{head\ =\ reverse(head,0);}
+\DoxyCodeLine{display(head);}
+
+\end{DoxyCode}
+ {\bfseries{output 1}} (ttl = 0) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:9\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:2\ -\/>\ [1]:8\ -\/>\ [2]:1\ -\/>\ [3]:4\ -\/>\ [4]:9\ -\/>\ [5]:3\ -\/>\ [6]:7\ -\/>\ [7]:5\ -\/>\ [8]:0\ -\/>\ NULL}
+
+\end{DoxyCode}
+ The {\bfseries{reverse}} function has a second parameter, {\itshape ttl} which specifies the length of the initial n-\/node segment of the list to reverse. If this value is 0, then the entire list is reversed.
+
+{\bfseries{output 2}} (ttl = 5) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:9\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:9\ -\/>\ [1]:3\ -\/>\ [2]:7\ -\/>\ [3]:5\ -\/>\ [4]:0\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md8}{}\doxyparagraph{\texorpdfstring{5}{5}}\label{index_autotoc_md8}
+{\bfseries{Sorting a list}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{head\ =\ append(head,5);}
+\DoxyCodeLine{head\ =\ append(head,7);}
+\DoxyCodeLine{head\ =\ append(head,3);}
+\DoxyCodeLine{head\ =\ append(head,9);}
+\DoxyCodeLine{head\ =\ append(head,4);}
+\DoxyCodeLine{head\ =\ append(head,1);}
+\DoxyCodeLine{head\ =\ append(head,8);}
+\DoxyCodeLine{head\ =\ append(head,2);}
+\DoxyCodeLine{}
+\DoxyCodeLine{display(head);}
+\DoxyCodeLine{sort(head);}
+\DoxyCodeLine{display(head);}
+
+\end{DoxyCode}
+ {\bfseries{output}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:9\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:0\ -\/>\ [1]:1\ -\/>\ [2]:2\ -\/>\ [3]:3\ -\/>\ [4]:4\ -\/>\ [5]:5\ -\/>\ [6]:7\ -\/>\ [7]:8\ -\/>\ [8]:9\ -\/>\ NULL}
+
+\end{DoxyCode}
+ \DoxyHorRuler{0}
  

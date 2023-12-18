@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['next_0',['next',['../structnode.html#aa3e8aa83f864292b5a01210f4453fcc0',1,'node']]],
-  ['node_1',['node',['../structnode.html',1,'node'],['../sllist_8h.html#ac09cf950484bd9550d14d602b0e5e7fb',1,'Node:&#160;sllist.h']]]
+  ['c_0',['Linked List Library in C',['../index.html',1,'']]],
+  ['count_1',['count',['../sllist_8c.html#ac37adafe45663700577eea839fdbde45',1,'count(Node *head, int target):&#160;sllist.c'],['../sllist_8h.html#ac37adafe45663700577eea839fdbde45',1,'count(Node *head, int target):&#160;sllist.c']]]
 ];

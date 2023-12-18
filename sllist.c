@@ -1,10 +1,11 @@
 /**
+ * This file contains the definitions for all the functions for performing certain rudimentary list operations.
  * @file sllist.c
  * @author Sourabh Warrier
  * @date Saturday December 16th, 2023
- * @brief This file contains the definitions for all the functions fo performing certain rudimentary list operations. 
- * Some unusual features such as the time to live attribute (ttl) have also been implemented. 
 */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "sllist.h"
@@ -256,7 +257,7 @@ Node* join(Node* head1, Node* head2){
 /**
  * Reverse the first n nodes in a list
  * @param Node* head : pointer to the head node of a list
- * @param int ttl : length of first segment to be reversed
+ * @param int ttl : length of initial n-node segment to be reversed
  * @return (Node*) pointer to the head node
 */
 Node* reverse(Node* head, int ttl){
