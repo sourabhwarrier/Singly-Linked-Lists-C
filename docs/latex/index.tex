@@ -27,7 +27,7 @@ The first node (head) can be created as follows.
 \DoxyCodeLine{Node*\ head;}
 
 \end{DoxyCode}
- Note that the former places the head node in the heap.\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Examples}{Examples}}\label{index_autotoc_md3}
+ Note that the former places the head node in the heap with a default value of 0.\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Examples}{Examples}}\label{index_autotoc_md3}
 \hypertarget{index_autotoc_md4}{}\doxyparagraph{\texorpdfstring{1}{1}}\label{index_autotoc_md4}
 {\bfseries{Getting started}} 
 \begin{DoxyCode}{0}
@@ -37,6 +37,7 @@ The first node (head) can be created as follows.
 \DoxyCodeLine{}
 \DoxyCodeLine{int\ main(void)\{}
 \DoxyCodeLine{\ \ \ \ Node*\ head\ =\ (Node*)calloc(1,sizeof(Node));}
+\DoxyCodeLine{\ \ \ \ head-\/>value\ =\ 11;}
 \DoxyCodeLine{\ \ \ \ display(head);}
 \DoxyCodeLine{\ \ \ \ return\ 0;}
 \DoxyCodeLine{\}}
@@ -44,12 +45,14 @@ The first node (head) can be created as follows.
 \end{DoxyCode}
  {\bfseries{output}} 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{[0]:0\ -\/>\ NULL}
+\DoxyCodeLine{[0]:11\ -\/>\ NULL}
 
 \end{DoxyCode}
 \hypertarget{index_autotoc_md5}{}\doxyparagraph{\texorpdfstring{2}{2}}\label{index_autotoc_md5}
 {\bfseries{Appending some nodes to a list}} 
 \begin{DoxyCode}{0}
+\DoxyCodeLine{Node*\ head\ =\ (Node*)calloc(1,sizeof(Node));}
+\DoxyCodeLine{head-\/>value\ =\ 11;}
 \DoxyCodeLine{for\ (int\ i\ =\ 0;i<10;i++)\{}
 \DoxyCodeLine{\ \ \ \ head\ =\ append(head,i*i);}
 \DoxyCodeLine{\}}
@@ -58,14 +61,16 @@ The first node (head) can be created as follows.
 \end{DoxyCode}
  {\bfseries{output}} 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{[0]:0\ -\/>\ [1]:0\ -\/>\ [2]:1\ -\/>\ [3]:4\ -\/>\ [4]:9\ -\/>\ [5]:16\ -\/>\ [6]:25\ -\/>\ [7]:36\ -\/>\ [8]:49\ -\/>\ [9]:64\ -\/>\ [10]:81\ -\/>\ NULL}
+\DoxyCodeLine{[0]:11\ -\/>\ [1]:0\ -\/>\ [2]:1\ -\/>\ [3]:4\ -\/>\ [4]:9\ -\/>\ [5]:16\ -\/>\ [6]:25\ -\/>\ [7]:36\ -\/>\ [8]:49\ -\/>\ [9]:64\ -\/>\ [10]:81\ -\/>\ NULL}
 
 \end{DoxyCode}
- Note that the {\bfseries{append}} function has a return type of {\bfseries{Node\texorpdfstring{$\ast$}{*}}}. This is because an empty list can be represented by a NULL pointer too, ~\newline
- in which case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially ~\newline
+ The {\bfseries{append}} function has a return type of {\bfseries{Node\texorpdfstring{$\ast$}{*}}}. This is because an empty list can be represented by a NULL pointer too, in which ~\newline
+ case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially ~\newline
  changes the head node, hence the head pointer is reassigned when the append function is called.\hypertarget{index_autotoc_md6}{}\doxyparagraph{\texorpdfstring{3}{3}}\label{index_autotoc_md6}
 {\bfseries{Dropping duplicate from a list}} 
 \begin{DoxyCode}{0}
+\DoxyCodeLine{Node*\ head\ =\ (Node*)calloc(1,sizeof(Node));}
+\DoxyCodeLine{head-\/>value\ =\ 11;}
 \DoxyCodeLine{head\ =\ append(head,5);}
 \DoxyCodeLine{head\ =\ append(head,5);}
 \DoxyCodeLine{head\ =\ append(head,7);}
@@ -84,8 +89,8 @@ The first node (head) can be created as follows.
 \end{DoxyCode}
  {\bfseries{output 1}} (max\+\_\+duplicates = 0) 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:5\ -\/>\ [3]:7\ -\/>\ [4]:7\ -\/>\ [5]:3\ -\/>\ [6]:5\ -\/>\ [7]:4\ -\/>\ [8]:1\ -\/>\ [9]:8\ -\/>\ [10]:2\ -\/>\ NULL}
-\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:4\ -\/>\ [5]:1\ -\/>\ [6]:8\ -\/>\ [7]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:11\ -\/>\ [1]:5\ -\/>\ [2]:5\ -\/>\ [3]:7\ -\/>\ [4]:7\ -\/>\ [5]:3\ -\/>\ [6]:5\ -\/>\ [7]:4\ -\/>\ [8]:1\ -\/>\ [9]:8\ -\/>\ [10]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:11\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:4\ -\/>\ [5]:1\ -\/>\ [6]:8\ -\/>\ [7]:2\ -\/>\ NULL}
 
 \end{DoxyCode}
  The {\bfseries{drop duplicates}} function has a second parameter, {\itshape max\+\_\+duplicates} which specifies the number of extra copies of a value to retain. ~\newline
@@ -93,13 +98,15 @@ The first node (head) can be created as follows.
 
 {\bfseries{output 2}} (max\+\_\+duplicates = 1) 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:5\ -\/>\ [3]:7\ -\/>\ [4]:7\ -\/>\ [5]:3\ -\/>\ [6]:5\ -\/>\ [7]:4\ -\/>\ [8]:1\ -\/>\ [9]:8\ -\/>\ [10]:2\ -\/>\ NULL}
-\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:5\ -\/>\ [3]:7\ -\/>\ [4]:7\ -\/>\ [5]:3\ -\/>\ [6]:4\ -\/>\ [7]:1\ -\/>\ [8]:8\ -\/>\ [9]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:11\ -\/>\ [1]:5\ -\/>\ [2]:5\ -\/>\ [3]:7\ -\/>\ [4]:7\ -\/>\ [5]:3\ -\/>\ [6]:5\ -\/>\ [7]:4\ -\/>\ [8]:1\ -\/>\ [9]:8\ -\/>\ [10]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:11\ -\/>\ [1]:5\ -\/>\ [2]:5\ -\/>\ [3]:7\ -\/>\ [4]:7\ -\/>\ [5]:3\ -\/>\ [6]:4\ -\/>\ [7]:1\ -\/>\ [8]:8\ -\/>\ [9]:2\ -\/>\ NULL}
 
 \end{DoxyCode}
 \hypertarget{index_autotoc_md7}{}\doxyparagraph{\texorpdfstring{4}{4}}\label{index_autotoc_md7}
 {\bfseries{Reversing a list}} 
 \begin{DoxyCode}{0}
+\DoxyCodeLine{Node*\ head\ =\ (Node*)calloc(1,sizeof(Node));}
+\DoxyCodeLine{head-\/>value\ =\ 11;}
 \DoxyCodeLine{head\ =\ append(head,5);}
 \DoxyCodeLine{head\ =\ append(head,7);}
 \DoxyCodeLine{head\ =\ append(head,3);}
@@ -116,21 +123,24 @@ The first node (head) can be created as follows.
 \end{DoxyCode}
  {\bfseries{output 1}} (ttl = 0) 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:9\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
-\DoxyCodeLine{[0]:2\ -\/>\ [1]:8\ -\/>\ [2]:1\ -\/>\ [3]:4\ -\/>\ [4]:9\ -\/>\ [5]:3\ -\/>\ [6]:7\ -\/>\ [7]:5\ -\/>\ [8]:0\ -\/>\ NULL}
+\DoxyCodeLine{[0]:11\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:9\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:2\ -\/>\ [1]:8\ -\/>\ [2]:1\ -\/>\ [3]:4\ -\/>\ [4]:9\ -\/>\ [5]:3\ -\/>\ [6]:7\ -\/>\ [7]:5\ -\/>\ [8]:11\ -\/>\ NULL}
 
 \end{DoxyCode}
- The {\bfseries{reverse}} function has a second parameter, {\itshape ttl} which specifies the length of the initial n-\/node segment of the list to reverse. If this value is 0, then the entire list is reversed.
+ The {\bfseries{reverse}} function has a second parameter, {\itshape ttl} which specifies the length of the initial n-\/node segment of the list to reverse. ~\newline
+ If this value is 0, then the entire list is reversed.
 
 {\bfseries{output 2}} (ttl = 5) 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:9\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
-\DoxyCodeLine{[0]:9\ -\/>\ [1]:3\ -\/>\ [2]:7\ -\/>\ [3]:5\ -\/>\ [4]:0\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:11\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:9\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:9\ -\/>\ [1]:3\ -\/>\ [2]:7\ -\/>\ [3]:5\ -\/>\ [4]:11\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
 
 \end{DoxyCode}
 \hypertarget{index_autotoc_md8}{}\doxyparagraph{\texorpdfstring{5}{5}}\label{index_autotoc_md8}
 {\bfseries{Sorting a list}} 
 \begin{DoxyCode}{0}
+\DoxyCodeLine{Node*\ head\ =\ (Node*)calloc(1,sizeof(Node));}
+\DoxyCodeLine{head-\/>value\ =\ 11;}
 \DoxyCodeLine{head\ =\ append(head,5);}
 \DoxyCodeLine{head\ =\ append(head,7);}
 \DoxyCodeLine{head\ =\ append(head,3);}
@@ -147,13 +157,13 @@ The first node (head) can be created as follows.
 \end{DoxyCode}
  {\bfseries{output}} 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{[0]:0\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:9\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
-\DoxyCodeLine{[0]:0\ -\/>\ [1]:1\ -\/>\ [2]:2\ -\/>\ [3]:3\ -\/>\ [4]:4\ -\/>\ [5]:5\ -\/>\ [6]:7\ -\/>\ [7]:8\ -\/>\ [8]:9\ -\/>\ NULL}
+\DoxyCodeLine{[0]:11\ -\/>\ [1]:5\ -\/>\ [2]:7\ -\/>\ [3]:3\ -\/>\ [4]:9\ -\/>\ [5]:4\ -\/>\ [6]:1\ -\/>\ [7]:8\ -\/>\ [8]:2\ -\/>\ NULL}
+\DoxyCodeLine{[0]:1\ -\/>\ [1]:2\ -\/>\ [2]:3\ -\/>\ [3]:4\ -\/>\ [4]:5\ -\/>\ [5]:7\ -\/>\ [6]:8\ -\/>\ [7]:9\ -\/>\ [8]:11\ -\/>\ NULL}
 
 \end{DoxyCode}
 
 
-To explore more list functions go to {\bfseries{File}} \texorpdfstring{$>$}{>} {\bfseries{File members}} \texorpdfstring{$>$}{>} {\bfseries{Functions}}.
+There are a total of 16 functions in this project. To explore them go to {\bfseries{File}} \texorpdfstring{$>$}{>} {\bfseries{File members}} \texorpdfstring{$>$}{>} {\bfseries{Functions}}.
 
 \DoxyHorRuler{0}
  

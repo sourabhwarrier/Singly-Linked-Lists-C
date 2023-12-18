@@ -3,8 +3,9 @@
 #include "sllist.h"
 
 int main(void){
-    Node* head = (Node*) calloc(1,sizeof(Node));
-    
+    //Node* head = (Node*) calloc(1,sizeof(Node));
+    //head->value = 11;
+    Node* head;
     head = append(head,5);
     head = append(head,7);
     head = append(head,3);
@@ -15,7 +16,7 @@ int main(void){
     head = append(head,2);
 
     display(head);
-    head = reverse(head,5);
+    sort(head);
     display(head);
     return 0;
 }

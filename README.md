@@ -26,7 +26,7 @@ or
 ```
 Node* head;
 ```
-Note that the former places the head node in the heap.
+Note that the former places the head node in the heap with a default value of 0.
 
 #### Examples
 
@@ -40,19 +40,22 @@ Note that the former places the head node in the heap.
 
 int main(void){
     Node* head = (Node*)calloc(1,sizeof(Node));
+    head->value = 11;
     display(head);
     return 0;
 }
 ```
 **output**
 ```
-[0]:0 -> NULL
+[0]:11 -> NULL
 ```
 
 ##### 2
 
 **Appending some nodes to a list**
 ```
+Node* head = (Node*)calloc(1,sizeof(Node));
+head->value = 11;
 for (int i = 0;i<10;i++){
     head = append(head,i*i);
 }
@@ -60,14 +63,16 @@ display(head);
 ```
 **output**
 ```
-[0]:0 -> [1]:0 -> [2]:1 -> [3]:4 -> [4]:9 -> [5]:16 -> [6]:25 -> [7]:36 -> [8]:49 -> [9]:64 -> [10]:81 -> NULL
+[0]:11 -> [1]:0 -> [2]:1 -> [3]:4 -> [4]:9 -> [5]:16 -> [6]:25 -> [7]:36 -> [8]:49 -> [9]:64 -> [10]:81 -> NULL
 ```
-Note that the **append** function has a return type of **Node\***. This is because an empty list can be represented by a NULL pointer too, \n in which case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially \n changes the head node, hence the head pointer is reassigned when the append function is called.
+The **append** function has a return type of **Node\***. This is because an empty list can be represented by a NULL pointer too, in which \n case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially \n changes the head node, hence the head pointer is reassigned when the append function is called.
 
 ##### 3
 
 **Dropping duplicate from a list**
 ```
+Node* head = (Node*)calloc(1,sizeof(Node));
+head->value = 11;
 head = append(head,5);
 head = append(head,5);
 head = append(head,7);
@@ -85,21 +90,23 @@ display(head);
 ```
 **output 1** \(max_duplicates = 0\)
 ```
-[0]:0 -> [1]:5 -> [2]:5 -> [3]:7 -> [4]:7 -> [5]:3 -> [6]:5 -> [7]:4 -> [8]:1 -> [9]:8 -> [10]:2 -> NULL
-[0]:0 -> [1]:5 -> [2]:7 -> [3]:3 -> [4]:4 -> [5]:1 -> [6]:8 -> [7]:2 -> NULL
+[0]:11 -> [1]:5 -> [2]:5 -> [3]:7 -> [4]:7 -> [5]:3 -> [6]:5 -> [7]:4 -> [8]:1 -> [9]:8 -> [10]:2 -> NULL
+[0]:11 -> [1]:5 -> [2]:7 -> [3]:3 -> [4]:4 -> [5]:1 -> [6]:8 -> [7]:2 -> NULL
 ```
 The **drop duplicates** function has a second parameter, *max_duplicates* which specifies the number of extra copies of a value to retain. \n If this value is 0, then all unique values are retained only once and all copies are dropped.
 
 **output 2** \(max_duplicates = 1\)
 ```
-[0]:0 -> [1]:5 -> [2]:5 -> [3]:7 -> [4]:7 -> [5]:3 -> [6]:5 -> [7]:4 -> [8]:1 -> [9]:8 -> [10]:2 -> NULL
-[0]:0 -> [1]:5 -> [2]:5 -> [3]:7 -> [4]:7 -> [5]:3 -> [6]:4 -> [7]:1 -> [8]:8 -> [9]:2 -> NULL
+[0]:11 -> [1]:5 -> [2]:5 -> [3]:7 -> [4]:7 -> [5]:3 -> [6]:5 -> [7]:4 -> [8]:1 -> [9]:8 -> [10]:2 -> NULL
+[0]:11 -> [1]:5 -> [2]:5 -> [3]:7 -> [4]:7 -> [5]:3 -> [6]:4 -> [7]:1 -> [8]:8 -> [9]:2 -> NULL
 ```
 
 ##### 4
 
 **Reversing a list**
 ```
+Node* head = (Node*)calloc(1,sizeof(Node));
+head->value = 11;
 head = append(head,5);
 head = append(head,7);
 head = append(head,3);
@@ -115,21 +122,23 @@ display(head);
 ```
 **output 1**  \(ttl = 0\)
 ```
-[0]:0 -> [1]:5 -> [2]:7 -> [3]:3 -> [4]:9 -> [5]:4 -> [6]:1 -> [7]:8 -> [8]:2 -> NULL
-[0]:2 -> [1]:8 -> [2]:1 -> [3]:4 -> [4]:9 -> [5]:3 -> [6]:7 -> [7]:5 -> [8]:0 -> NULL
+[0]:11 -> [1]:5 -> [2]:7 -> [3]:3 -> [4]:9 -> [5]:4 -> [6]:1 -> [7]:8 -> [8]:2 -> NULL
+[0]:2 -> [1]:8 -> [2]:1 -> [3]:4 -> [4]:9 -> [5]:3 -> [6]:7 -> [7]:5 -> [8]:11 -> NULL
 ```
-The **reverse** function has a second parameter, *ttl* which specifies the length of the initial n-node segment of the list to reverse. If this value is 0, then the entire list is reversed.
+The **reverse** function has a second parameter, *ttl* which specifies the length of the initial n-node segment of the list to reverse. \n If this value is 0, then the entire list is reversed.
 
 **output 2** \(ttl = 5\)
 ```
-[0]:0 -> [1]:5 -> [2]:7 -> [3]:3 -> [4]:9 -> [5]:4 -> [6]:1 -> [7]:8 -> [8]:2 -> NULL
-[0]:9 -> [1]:3 -> [2]:7 -> [3]:5 -> [4]:0 -> [5]:4 -> [6]:1 -> [7]:8 -> [8]:2 -> NULL
+[0]:11 -> [1]:5 -> [2]:7 -> [3]:3 -> [4]:9 -> [5]:4 -> [6]:1 -> [7]:8 -> [8]:2 -> NULL
+[0]:9 -> [1]:3 -> [2]:7 -> [3]:5 -> [4]:11 -> [5]:4 -> [6]:1 -> [7]:8 -> [8]:2 -> NULL
 ```
 
 ##### 5
 
 **Sorting a list**
 ```
+Node* head = (Node*)calloc(1,sizeof(Node));
+head->value = 11;
 head = append(head,5);
 head = append(head,7);
 head = append(head,3);
@@ -145,10 +154,10 @@ display(head);
 ```
 **output**
 ```
-[0]:0 -> [1]:5 -> [2]:7 -> [3]:3 -> [4]:9 -> [5]:4 -> [6]:1 -> [7]:8 -> [8]:2 -> NULL
-[0]:0 -> [1]:1 -> [2]:2 -> [3]:3 -> [4]:4 -> [5]:5 -> [6]:7 -> [7]:8 -> [8]:9 -> NULL
+[0]:11 -> [1]:5 -> [2]:7 -> [3]:3 -> [4]:9 -> [5]:4 -> [6]:1 -> [7]:8 -> [8]:2 -> NULL
+[0]:1 -> [1]:2 -> [2]:3 -> [3]:4 -> [4]:5 -> [5]:7 -> [6]:8 -> [7]:9 -> [8]:11 -> NULL
 ```
 
-To explore more list functions go to **File** \> **File members** \>  **Functions**.
+There are a total of 16 functions in this project. To explore them go to **File** \> **File members** \>  **Functions**.
 
 ---
