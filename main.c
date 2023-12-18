@@ -3,7 +3,7 @@
 #include "sllist.h"
 
 int main(void){
-    Node* head = (Node*)calloc(1,sizeof(Node));
+    Node* head = (Node*) calloc(1,sizeof(Node));
     
     head = append(head,5);
     head = append(head,7);
