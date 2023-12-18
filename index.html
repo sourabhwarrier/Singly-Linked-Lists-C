@@ -91,7 +91,7 @@ The Node Type</h3>
 </div><!-- fragment --><p> The first node in a list is the head node. In this project, nodes reside in the heap.<br  />
 The first node (head) can be created as follows. </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 </div><!-- fragment --><p> or </p><div class="fragment"><div class="line">Node* head;</div>
-</div><!-- fragment --><p> Note that the former places the head node in the heap.</p>
+</div><!-- fragment --><p> Note that the former places the head node in the heap with a default value of 0.</p>
 <h3><a class="anchor" id="autotoc_md3"></a>
 Examples</h3>
 <h4><a class="anchor" id="autotoc_md4"></a>
@@ -102,23 +102,28 @@ Examples</h3>
 <div class="line"> </div>
 <div class="line">int main(void){</div>
 <div class="line">    Node* head = (Node*)calloc(1,sizeof(Node));</div>
+<div class="line">    head-&gt;value = 11;</div>
 <div class="line">    display(head);</div>
 <div class="line">    return 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> <b>output</b> </p><div class="fragment"><div class="line">[0]:0 -&gt; NULL</div>
+</div><!-- fragment --><p> <b>output</b> </p><div class="fragment"><div class="line">[0]:11 -&gt; NULL</div>
 </div><!-- fragment --><h4><a class="anchor" id="autotoc_md5"></a>
 2</h4>
-<p><b>Appending some nodes to a list</b> </p><div class="fragment"><div class="line">for (int i = 0;i&lt;10;i++){</div>
+<p><b>Appending some nodes to a list</b> </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
+<div class="line">head-&gt;value = 11;</div>
+<div class="line">for (int i = 0;i&lt;10;i++){</div>
 <div class="line">    head = append(head,i*i);</div>
 <div class="line">}</div>
 <div class="line">display(head);</div>
-</div><!-- fragment --><p> <b>output</b> </p><div class="fragment"><div class="line">[0]:0 -&gt; [1]:0 -&gt; [2]:1 -&gt; [3]:4 -&gt; [4]:9 -&gt; [5]:16 -&gt; [6]:25 -&gt; [7]:36 -&gt; [8]:49 -&gt; [9]:64 -&gt; [10]:81 -&gt; NULL</div>
-</div><!-- fragment --><p> Note that the <b>append</b> function has a return type of <b>Node*</b>. This is because an empty list can be represented by a NULL pointer too, <br  />
- in which case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially <br  />
+</div><!-- fragment --><p> <b>output</b> </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:0 -&gt; [2]:1 -&gt; [3]:4 -&gt; [4]:9 -&gt; [5]:16 -&gt; [6]:25 -&gt; [7]:36 -&gt; [8]:49 -&gt; [9]:64 -&gt; [10]:81 -&gt; NULL</div>
+</div><!-- fragment --><p> The <b>append</b> function has a return type of <b>Node*</b>. This is because an empty list can be represented by a NULL pointer too, in which <br  />
+ case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially <br  />
  changes the head node, hence the head pointer is reassigned when the append function is called.</p>
 <h4><a class="anchor" id="autotoc_md6"></a>
 3</h4>
-<p><b>Dropping duplicate from a list</b> </p><div class="fragment"><div class="line">head = append(head,5);</div>
+<p><b>Dropping duplicate from a list</b> </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
+<div class="line">head-&gt;value = 11;</div>
+<div class="line">head = append(head,5);</div>
 <div class="line">head = append(head,5);</div>
 <div class="line">head = append(head,7);</div>
 <div class="line">head = append(head,7);</div>
@@ -132,15 +137,17 @@ Examples</h3>
 <div class="line">display(head);</div>
 <div class="line">drop_duplicates(head,0);</div>
 <div class="line">display(head);</div>
-</div><!-- fragment --><p> <b>output 1</b> (max_duplicates = 0) </p><div class="fragment"><div class="line">[0]:0 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:5 -&gt; [7]:4 -&gt; [8]:1 -&gt; [9]:8 -&gt; [10]:2 -&gt; NULL</div>
-<div class="line">[0]:0 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:4 -&gt; [5]:1 -&gt; [6]:8 -&gt; [7]:2 -&gt; NULL</div>
+</div><!-- fragment --><p> <b>output 1</b> (max_duplicates = 0) </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:5 -&gt; [7]:4 -&gt; [8]:1 -&gt; [9]:8 -&gt; [10]:2 -&gt; NULL</div>
+<div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:4 -&gt; [5]:1 -&gt; [6]:8 -&gt; [7]:2 -&gt; NULL</div>
 </div><!-- fragment --><p> The <b>drop duplicates</b> function has a second parameter, <em>max_duplicates</em> which specifies the number of extra copies of a value to retain. <br  />
  If this value is 0, then all unique values are retained only once and all copies are dropped.</p>
-<p><b>output 2</b> (max_duplicates = 1) </p><div class="fragment"><div class="line">[0]:0 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:5 -&gt; [7]:4 -&gt; [8]:1 -&gt; [9]:8 -&gt; [10]:2 -&gt; NULL</div>
-<div class="line">[0]:0 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:4 -&gt; [7]:1 -&gt; [8]:8 -&gt; [9]:2 -&gt; NULL</div>
+<p><b>output 2</b> (max_duplicates = 1) </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:5 -&gt; [7]:4 -&gt; [8]:1 -&gt; [9]:8 -&gt; [10]:2 -&gt; NULL</div>
+<div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:4 -&gt; [7]:1 -&gt; [8]:8 -&gt; [9]:2 -&gt; NULL</div>
 </div><!-- fragment --><h4><a class="anchor" id="autotoc_md7"></a>
 4</h4>
-<p><b>Reversing a list</b> </p><div class="fragment"><div class="line">head = append(head,5);</div>
+<p><b>Reversing a list</b> </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
+<div class="line">head-&gt;value = 11;</div>
+<div class="line">head = append(head,5);</div>
 <div class="line">head = append(head,7);</div>
 <div class="line">head = append(head,3);</div>
 <div class="line">head = append(head,9);</div>
@@ -152,14 +159,17 @@ Examples</h3>
 <div class="line">display(head);</div>
 <div class="line">head = reverse(head,0);</div>
 <div class="line">display(head);</div>
-</div><!-- fragment --><p> <b>output 1</b> (ttl = 0) </p><div class="fragment"><div class="line">[0]:0 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:9 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
-<div class="line">[0]:2 -&gt; [1]:8 -&gt; [2]:1 -&gt; [3]:4 -&gt; [4]:9 -&gt; [5]:3 -&gt; [6]:7 -&gt; [7]:5 -&gt; [8]:0 -&gt; NULL</div>
-</div><!-- fragment --><p> The <b>reverse</b> function has a second parameter, <em>ttl</em> which specifies the length of the initial n-node segment of the list to reverse. If this value is 0, then the entire list is reversed.</p>
-<p><b>output 2</b> (ttl = 5) </p><div class="fragment"><div class="line">[0]:0 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:9 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
-<div class="line">[0]:9 -&gt; [1]:3 -&gt; [2]:7 -&gt; [3]:5 -&gt; [4]:0 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
+</div><!-- fragment --><p> <b>output 1</b> (ttl = 0) </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:9 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
+<div class="line">[0]:2 -&gt; [1]:8 -&gt; [2]:1 -&gt; [3]:4 -&gt; [4]:9 -&gt; [5]:3 -&gt; [6]:7 -&gt; [7]:5 -&gt; [8]:11 -&gt; NULL</div>
+</div><!-- fragment --><p> The <b>reverse</b> function has a second parameter, <em>ttl</em> which specifies the length of the initial n-node segment of the list to reverse. <br  />
+ If this value is 0, then the entire list is reversed.</p>
+<p><b>output 2</b> (ttl = 5) </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:9 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
+<div class="line">[0]:9 -&gt; [1]:3 -&gt; [2]:7 -&gt; [3]:5 -&gt; [4]:11 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
 </div><!-- fragment --><h4><a class="anchor" id="autotoc_md8"></a>
 5</h4>
-<p><b>Sorting a list</b> </p><div class="fragment"><div class="line">head = append(head,5);</div>
+<p><b>Sorting a list</b> </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
+<div class="line">head-&gt;value = 11;</div>
+<div class="line">head = append(head,5);</div>
 <div class="line">head = append(head,7);</div>
 <div class="line">head = append(head,3);</div>
 <div class="line">head = append(head,9);</div>
@@ -171,9 +181,9 @@ Examples</h3>
 <div class="line">display(head);</div>
 <div class="line">sort(head);</div>
 <div class="line">display(head);</div>
-</div><!-- fragment --><p> <b>output</b> </p><div class="fragment"><div class="line">[0]:0 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:9 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
-<div class="line">[0]:0 -&gt; [1]:1 -&gt; [2]:2 -&gt; [3]:3 -&gt; [4]:4 -&gt; [5]:5 -&gt; [6]:7 -&gt; [7]:8 -&gt; [8]:9 -&gt; NULL</div>
-</div><!-- fragment --><p>To explore more list functions go to <b>File</b> &gt; <b>File members</b> &gt; <b>Functions</b>.</p>
+</div><!-- fragment --><p> <b>output</b> </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:9 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
+<div class="line">[0]:1 -&gt; [1]:2 -&gt; [2]:3 -&gt; [3]:4 -&gt; [4]:5 -&gt; [5]:7 -&gt; [6]:8 -&gt; [7]:9 -&gt; [8]:11 -&gt; NULL</div>
+</div><!-- fragment --><p>There are a total of 16 functions in this project. To explore them go to <b>File</b> &gt; <b>File members</b> &gt; <b>Functions</b>.</p>
 <hr  />
  </div></div><!-- PageDoc -->
 </div><!-- contents -->
