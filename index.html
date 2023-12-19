@@ -130,7 +130,7 @@ Examples</h3>
 3</h4>
 <p><b>Dropping duplicate from a list</b></p>
 <p>The <b>drop duplicates</b> function has a second parameter, <em>max_duplicates</em> which specifies the number of extra copies of a value to retain. <br  />
- If this value is 0, then all unique values are retained only once and all copies are dropped.</p>
+ If this value is 0, then each distinct value is retained only once and all copies are dropped.</p>
 <div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 <div class="line">head-&gt;value = 11;</div>
 <div class="line">head = append(head,5);</div>
@@ -152,7 +152,7 @@ Examples</h3>
 </div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp9kstOwzAQRX9l5G5AmkpxnPeCBZSuCgsQEhJhYRqXRuRROc6iavvvjOO2iiKBV55zrzxzrTmwdVsolrFvLXdbWL3kDdDxPnLmwRFuOEfgtzn7hPn8DjhhbnGIIC70-H4EnwR_KoAgKiyNEcKxPSAhmAoQEg0tFQjx2B6REJ1fvwoQE40tDRCSK02IJsPkCOmVpkRTSxOK410wtzH5kNNHeH5brazifoC7BK4Qbj5XhK67K9aV7LqF2gD93x42ZVVls8fhYGd0-6OymRBi4v2qenX2Rvdp9CD-8WpVnK3LJal_WYGjwBBjTDBFimTHGcs-BhjZx8bQGyZhyGqla1kWtAYHq-fMbFWtcpbRtVG90bLKWd6cyCp7077umzXLjO4Vsn5XSKMWpaSONcs2suqIqqI0rX5yqzVs2OkXkcmlVQ" alt="" width="100%" class="inline"/></p>
 <p><b>output 2</b> (max_duplicates = 1) </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:5 -&gt; [7]:4 -&gt; [8]:1 -&gt; [9]:8 -&gt; [10]:2 -&gt; NULL</div>
 <div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:4 -&gt; [7]:1 -&gt; [8]:8 -&gt; [9]:2 -&gt; NULL</div>
-</div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp9kjtPwzAUhf_KlbuAdCvFcd4DA5ROhQGEhIQZTOPSiDwqxxmqtv-d66SNqkjgyf7OkX2O7QNbN7lmGfs2areF1YusgYb3IZkHR7jhHIHfSvYJ8_kdcMLc4RBBXOjx_Qg-Cf5UAEFUOBojhNf2gIRgKkBINHRUIEQjjYhG563jkcZEY0cDhGSkCdGkj42QjjQlmjqaUBfvgrnryPuSPsLz22rllKE-H-IPCzGEGxbrUrXtQm-A7msPm6Iss9ljP7C1pvnR2UwIMfF-lZ0-e6P7NHoQ_3iNzs_W5ZLUv6zAUWCIEcaYYIrUwwW6NvgYuM2ukdcnYcgqbSpV5PTsB6dLZre60pJlNK11Z40qJZP1iayqs83rvl6zzJpOI-t2ubJ6USg6r2LZRpUtUZ0XtjFPw1fqf9TpFz6GoXY" alt="" width="100%" class="inline"/></p>
+</div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp90j1PwzAQBuC_cnIXkK5SHOd7YIDSqTCAkJBqBtO4NCIfleMMVdv_zjlJowoJPCXPvbLvEh_Zpsk1y9iXUfsdrF5kDbS8tWQenOCGcwR-K9kHzOd3wIm54xDBn9Qn9UcVkwpS4TRGCCYNSINRw0lD0tCpQIgveno_QUSFaNx6KkBMGjsNEJJJE9Kk7xkhnTQlTZ0mNIh3Ye4G5P2EPsLz22rlKsPs4XDG8LIpVdsu9Bbo-xxgW5RlNnvsF7bWNN86mwkhfmU_y06P2eg-jR7EP1mj8zG6XFL1ryhwFBhihDEmmCK17hq6DkRuq2vw-j4YskqbShU5_eSjq0tmd7rSkmX0WOvOGlVKJuszRVVnm9dDvWGZNZ1G1u1zZfWiUHRaxbKtKltSnRe2MU_Dxenvz_kH112dRw" alt="" width="100%" class="inline"/></p>
 <h4><a class="anchor" id="autotoc_md7"></a>
 4</h4>
 <p><b>Reversing a list</b></p>
