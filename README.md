@@ -84,7 +84,7 @@ display(head);
 
 **Dropping duplicate from a list**
 
-The **drop duplicates** function has a second parameter, *max_duplicates* which specifies the number of extra copies of a value to retain. \n If this value is 0, then all unique values are retained only once and all copies are dropped.
+The **drop duplicates** function has a second parameter, *max_duplicates* which specifies the number of extra copies of a value to retain. \n If this value is 0, then each distinct value is retained only once and all copies are dropped.
 
 ```
 Node* head = (Node*)calloc(1,sizeof(Node));
