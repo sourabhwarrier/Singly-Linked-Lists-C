@@ -116,7 +116,7 @@ display(head);
 [0]:11 -> [1]:5 -> [2]:5 -> [3]:7 -> [4]:7 -> [5]:3 -> [6]:5 -> [7]:4 -> [8]:1 -> [9]:8 -> [10]:2 -> NULL
 [0]:11 -> [1]:5 -> [2]:5 -> [3]:7 -> [4]:7 -> [5]:3 -> [6]:4 -> [7]:1 -> [8]:8 -> [9]:2 -> NULL
 ```
-<img src="https://mermaid.ink/svg/pako:eNp9kjtPwzAUhf_KlbuAdCvFcd4DA5ROhQGEhIQZTOPSiDwqxxmqtv-d66SNqkjgyf7OkX2O7QNbN7lmGfs2areF1YusgYb3IZkHR7jhHIHfSvYJ8_kdcMLc4RBBXOjx_Qg-Cf5UAEFUOBojhNf2gIRgKkBINHRUIEQjjYhG563jkcZEY0cDhGSkCdGkj42QjjQlmjqaUBfvgrnryPuSPsLz22rllKE-H-IPCzGEGxbrUrXtQm-A7msPm6Iss9ljP7C1pvnR2UwIMfF-lZ0-e6P7NHoQ_3iNzs_W5ZLUv6zAUWCIEcaYYIrUwwW6NvgYuM2ukdcnYcgqbSpV5PTsB6dLZre60pJlNK11Z40qJZP1iayqs83rvl6zzJpOI-t2ubJ6USg6r2LZRpUtUZ0XtjFPw1fqf9TpFz6GoXY" width=100%></img>
+<img src="https://mermaid.ink/svg/pako:eNp90j1PwzAQBuC_cnIXkK5SHOd7YIDSqTCAkJBqBtO4NCIfleMMVdv_zjlJowoJPCXPvbLvEh_Zpsk1y9iXUfsdrF5kDbS8tWQenOCGcwR-K9kHzOd3wIm54xDBn9Qn9UcVkwpS4TRGCCYNSINRw0lD0tCpQIgveno_QUSFaNx6KkBMGjsNEJJJE9Kk7xkhnTQlTZ0mNIh3Ye4G5P2EPsLz22rlKsPs4XDG8LIpVdsu9Bbo-xxgW5RlNnvsF7bWNN86mwkhfmU_y06P2eg-jR7EP1mj8zG6XFL1ryhwFBhihDEmmCK17hq6DkRuq2vw-j4YskqbShU5_eSjq0tmd7rSkmX0WOvOGlVKJuszRVVnm9dDvWGZNZ1G1u1zZfWiUHRaxbKtKltSnRe2MU_Dxenvz_kH112dRw" width=100%></img>
 
 ##### 4
 
