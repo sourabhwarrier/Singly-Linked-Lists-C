@@ -5,6 +5,7 @@
  * @date Saturday December 16th, 2023
 */
 
+#ifndef sllist
 
 /**
  * Type Node stores a value and a pointer to the next node in the list.
@@ -24,10 +25,13 @@ Node* attach(Node* head, int new_value);
 Node* append(Node* head, int new_value);
 Node* drop_head(Node* head);
 Node* drop_tail(Node* head);
-Node* drop_matches(Node* head, int target, int ttl);
+Node* drop_match(Node* head, int target, int ttl);
 Node* join(Node* head1, Node* head2);
 Node* reverse(Node* head, int ttl);
 void sort(Node* head);
 void drop_duplicates(Node* head, int max_duplicates);
 Node * insert_after(Node* head, int target, int new_value);
 void del(Node* head);
+
+#define sllist
+#endif

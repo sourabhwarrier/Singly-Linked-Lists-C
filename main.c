@@ -9,7 +9,7 @@ int main(void){
     head = append(head,5);
     head = append(head,7);
     head = append(head,3);
-    head = append(head,9);
+    head = append(head,5);
     head = append(head,4);
     head = append(head,1);
     head = append(head,8);
@@ -17,6 +17,7 @@ int main(void){
 
     display(head);
     sort(head);
+    head = drop_match(head,5,0);
     display(head);
     return 0;
 }

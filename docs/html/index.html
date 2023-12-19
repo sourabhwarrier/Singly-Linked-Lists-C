@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Singly Linked Lists in C: Linked List Library in C</title>
+<link rel="icon" href="pngegg.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,9 +80,11 @@ $(function() {
 </p>
 <h3><a class="anchor" id="autotoc_md1"></a>
 List Structure</h3>
-<p><a href="https://mermaid.live/edit#pako:eNp1kD0LwkAMhv9KiItCXex2g-DXVh0UJ88h9FJbvF7L9SqK-t-N1aEgZgpvnuRNcse0MowKT57qHJKtdiAxO2jMmQw8YHgh23IEjq9hpPEI4_EU5lJ30jj5Byy-QNwDNvskeQMfi9RS0yw5A3G-QVZYqwarLqIm-OrMahDHcY-FWYf2lfmPsvgqGGHJvqTCyG33N6Ex5FyyRiWp4zZ4shq1ewpKbah2N5eiCl42xbY2FHhZkAwrUWVkG1HZFKHy68-_urc9XzJIZOI"><img src="https://mermaid.ink/img/pako:eNp1kD0LwkAMhv9KiItCXex2g-DXVh0UJ88h9FJbvF7L9SqK-t-N1aEgZgpvnuRNcse0MowKT57qHJKtdiAxO2jMmQw8YHgh23IEjq9hpPEI4_EU5lJ30jj5Byy-QNwDNvskeQMfi9RS0yw5A3G-QVZYqwarLqIm-OrMahDHcY-FWYf2lfmPsvgqGGHJvqTCyG33N6Ex5FyyRiWp4zZ4shq1ewpKbah2N5eiCl42xbY2FHhZkAwrUWVkG1HZFKHy68-_urc9XzJIZOI?type=png" alt="" class="inline"/></a></p>
+<p><img src="https://mermaid.ink/svg/pako:eNp10MFqwzAMBuBXEeqlA_ewGgrzYdCkvWU7bOw07-DFShPmOMWxx0rXd5_qllIK08n8-iyB9lgPllDhJphtC9WL9sC1fNfYkrHwC9Nv4xLdC_D0E-80fsBs9ggFA88_5xcxvxHlWciLkAKe36rqKE5bamfGcUUN8PIdNJ1zarLOJcYYhi9SEynljf3kSWe7KB4WpfzHwjLT66TIi66TMicosKfQm87yIfbHvsbYUk8aFT89pRiM06j9galJcXjd-RpVDIkEpq01kVad4VE9qsa4kVOyXRzC0-m4-caHPw4NchU" alt="" width="50%" class="inline"/></p>
 <p>The above list structure is implemented using <b>Nodes</b>. A node holds a value and a pointer to the next node.<br  />
 A node is implemented using a struct with members <em>value</em> and <em>next</em>.</p>
+<p>The head of a list is marked in blue. <span style="background-color: #6B96C3">‎ ‎ ‎ ‎ ‎ </span></p>
+<p>Deleted nodes are marked in red. <span style="background-color: #FF3333">‎ ‎ ‎ ‎ ‎ </span></p>
 <h3><a class="anchor" id="autotoc_md2"></a>
 The Node Type</h3>
 <div class="fragment"><div class="line">typedef struct node{</div>
@@ -91,8 +94,9 @@ The Node Type</h3>
 </div><!-- fragment --><p> The first node in a list is the head node. In this project, nodes reside in the heap.<br  />
 The first node (head) can be created as follows. </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 </div><!-- fragment --><p> or </p><div class="fragment"><div class="line">Node* head;</div>
-</div><!-- fragment --><p> Note that the former places the head node in the heap with a default value of 0.</p>
-<h3><a class="anchor" id="autotoc_md3"></a>
+</div><!-- fragment --><p> The former places the head node in the heap with a default value of 0. Deleting the node in this case would require freeing memory <br  />
+allocated to it. </p><div class="fragment"><div class="line">free(head);</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md3"></a>
 Examples</h3>
 <h4><a class="anchor" id="autotoc_md4"></a>
 1</h4>
@@ -107,21 +111,27 @@ Examples</h3>
 <div class="line">    return 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> <b>output</b> </p><div class="fragment"><div class="line">[0]:11 -&gt; NULL</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md5"></a>
+</div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNpNjzEPgjAQhf_K5Vw06SBpQmI3lBEdNE7WocIhxNKS0g4G-e9WWLzp5d6XvPdGLG1FKPDpVN9AcZYG4mU3iVv4wDpJGJyuRbGReF-sUqthyKmGhw4Edau1WKX7XXrgbPDOvkisOOd_LGQzigw7cp1qq5g2_nyJvqGOJIooDQXvlJYozRRRFby9vE2JwrtADENfKU95q2LPDkWt9BC_VLXeuuOyYB4yfQGuvkHB" alt="" width="10%" class="inline"/></p>
+<h4><a class="anchor" id="autotoc_md5"></a>
 2</h4>
-<p><b>Appending some nodes to a list</b> </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
+<p><b>Appending some nodes to a list</b></p>
+<p>The <b>append</b> function has a return type of <b>Node*</b>. This is because an empty list can be represented by a NULL pointer too, in which <br  />
+ case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially <br  />
+ changes the head node, hence the head pointer is reassigned when the append function is called.</p>
+<div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 <div class="line">head-&gt;value = 11;</div>
 <div class="line">for (int i = 0;i&lt;10;i++){</div>
 <div class="line">    head = append(head,i*i);</div>
 <div class="line">}</div>
 <div class="line">display(head);</div>
 </div><!-- fragment --><p> <b>output</b> </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:0 -&gt; [2]:1 -&gt; [3]:4 -&gt; [4]:9 -&gt; [5]:16 -&gt; [6]:25 -&gt; [7]:36 -&gt; [8]:49 -&gt; [9]:64 -&gt; [10]:81 -&gt; NULL</div>
-</div><!-- fragment --><p> The <b>append</b> function has a return type of <b>Node*</b>. This is because an empty list can be represented by a NULL pointer too, in which <br  />
- case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially <br  />
- changes the head node, hence the head pointer is reassigned when the append function is called.</p>
+</div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp10T1PwzAQBuC_crouIF2lOE6cj4EBylYYQEyYwTQujchHlThDVfrfObsQVUh4ih6_Ot_ljrjpK4slfgxmv4P1k-6AT_SqMYIvuBKCQFxrfIPl8gYEs_AcEchZY9Y4hC9VskqvCUE6a8KaeC0uNWVNQwVFoGZWzMpznBJkM2fMmWfJ6XzmnDkPD3LtYuaCufCsuBER_brwI4owY859P76s1_7qPP6mMeO4slvgv3KAbd005eI-HBrd0H_aciGl_JN9byb7k1W3hbqT_2RBUEySEkpJUUY5FcR9-JcuQ1Goh4StHVpTV7yio7_X6Ha2tRpL_uzs5AbTaNTdiaNmcv3zodtg6YbJEk77yji7qg0Xb7HcmmZktVXt-uHhvPaw_dM3ONSJTQ" alt="" width="100%" class="inline"/></p>
 <h4><a class="anchor" id="autotoc_md6"></a>
 3</h4>
-<p><b>Dropping duplicate from a list</b> </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
+<p><b>Dropping duplicate from a list</b></p>
+<p>The <b>drop duplicates</b> function has a second parameter, <em>max_duplicates</em> which specifies the number of extra copies of a value to retain. <br  />
+ If this value is 0, then all unique values are retained only once and all copies are dropped.</p>
+<div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 <div class="line">head-&gt;value = 11;</div>
 <div class="line">head = append(head,5);</div>
 <div class="line">head = append(head,5);</div>
@@ -139,13 +149,16 @@ Examples</h3>
 <div class="line">display(head);</div>
 </div><!-- fragment --><p> <b>output 1</b> (max_duplicates = 0) </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:5 -&gt; [7]:4 -&gt; [8]:1 -&gt; [9]:8 -&gt; [10]:2 -&gt; NULL</div>
 <div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:4 -&gt; [5]:1 -&gt; [6]:8 -&gt; [7]:2 -&gt; NULL</div>
-</div><!-- fragment --><p> The <b>drop duplicates</b> function has a second parameter, <em>max_duplicates</em> which specifies the number of extra copies of a value to retain. <br  />
- If this value is 0, then all unique values are retained only once and all copies are dropped.</p>
+</div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp9kstOwzAQRX9l5G5AmkpxnPeCBZSuCgsQEhJhYRqXRuRROc6iavvvjOO2iiKBV55zrzxzrTmwdVsolrFvLXdbWL3kDdDxPnLmwRFuOEfgtzn7hPn8DjhhbnGIIC70-H4EnwR_KoAgKiyNEcKxPSAhmAoQEg0tFQjx2B6REJ1fvwoQE40tDRCSK02IJsPkCOmVpkRTSxOK410wtzH5kNNHeH5brazifoC7BK4Qbj5XhK67K9aV7LqF2gD93x42ZVVls8fhYGd0-6OymRBi4v2qenX2Rvdp9CD-8WpVnK3LJal_WYGjwBBjTDBFimTHGcs-BhjZx8bQGyZhyGqla1kWtAYHq-fMbFWtcpbRtVG90bLKWd6cyCp7077umzXLjO4Vsn5XSKMWpaSONcs2suqIqqI0rX5yqzVs2OkXkcmlVQ" alt="" width="100%" class="inline"/></p>
 <p><b>output 2</b> (max_duplicates = 1) </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:5 -&gt; [7]:4 -&gt; [8]:1 -&gt; [9]:8 -&gt; [10]:2 -&gt; NULL</div>
 <div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:5 -&gt; [3]:7 -&gt; [4]:7 -&gt; [5]:3 -&gt; [6]:4 -&gt; [7]:1 -&gt; [8]:8 -&gt; [9]:2 -&gt; NULL</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp9kjtPwzAUhf_KlbuAdCvFcd4DA5ROhQGEhIQZTOPSiDwqxxmqtv-d66SNqkjgyf7OkX2O7QNbN7lmGfs2areF1YusgYb3IZkHR7jhHIHfSvYJ8_kdcMLc4RBBXOjx_Qg-Cf5UAEFUOBojhNf2gIRgKkBINHRUIEQjjYhG563jkcZEY0cDhGSkCdGkj42QjjQlmjqaUBfvgrnryPuSPsLz22rllKE-H-IPCzGEGxbrUrXtQm-A7msPm6Iss9ljP7C1pvnR2UwIMfF-lZ0-e6P7NHoQ_3iNzs_W5ZLUv6zAUWCIEcaYYIrUwwW6NvgYuM2ukdcnYcgqbSpV5PTsB6dLZre60pJlNK11Z40qJZP1iayqs83rvl6zzJpOI-t2ubJ6USg6r2LZRpUtUZ0XtjFPw1fqf9TpFz6GoXY" alt="" width="100%" class="inline"/></p>
+<h4><a class="anchor" id="autotoc_md7"></a>
 4</h4>
-<p><b>Reversing a list</b> </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
+<p><b>Reversing a list</b></p>
+<p>The <b>reverse</b> function has a second parameter, <em>ttl</em> which specifies the length of the initial n-node segment of the list to reverse. <br  />
+ If this value is 0, then the entire list is reversed.</p>
+<div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 <div class="line">head-&gt;value = 11;</div>
 <div class="line">head = append(head,5);</div>
 <div class="line">head = append(head,7);</div>
@@ -161,13 +174,15 @@ Examples</h3>
 <div class="line">display(head);</div>
 </div><!-- fragment --><p> <b>output 1</b> (ttl = 0) </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:9 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
 <div class="line">[0]:2 -&gt; [1]:8 -&gt; [2]:1 -&gt; [3]:4 -&gt; [4]:9 -&gt; [5]:3 -&gt; [6]:7 -&gt; [7]:5 -&gt; [8]:11 -&gt; NULL</div>
-</div><!-- fragment --><p> The <b>reverse</b> function has a second parameter, <em>ttl</em> which specifies the length of the initial n-node segment of the list to reverse. <br  />
- If this value is 0, then the entire list is reversed.</p>
+</div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp90rtOwzAUgOFXOXIXkE6lOI6dNAMDlE6FAYSE1DCYxqURuVS5DFXbd-fY7mAhgaf8-Y4SJ_KJbbvSsJx99fqwh_VL0QKtaFOwCM5wwznC89t6fVuwD5jP787vZ-CE3KJEiEKICWILKQIPQRAICwIhDiEhSCwsEEQIkkBaSBCSEBSBcjtDkCGkBKmFDEGFkBFkFmKE1IL_xMw6pD5SF8qHciF9SBeJj8SF8CFcxD5iF9wHdxH52NZ6GJZmB_SHj7Cr6jqfPbqFw9h33yafCSF-zX7Wk7nOqvuFehD_zPamvI6uVqR_jUKEHGMUmKBEhanbT-iZeytD1pi-0VVJh-JkvWDj3jSmYDldtmYae10XrGgvNKqnsXs9tluWj_1kkE2HUo9mWWl6eMPyna4HumvKauz6J3_Q3Hm7_ABX5KkL" alt="" width="80%" class="inline"/></p>
 <p><b>output 2</b> (ttl = 5) </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:9 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
 <div class="line">[0]:9 -&gt; [1]:3 -&gt; [2]:7 -&gt; [3]:5 -&gt; [4]:11 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp90rtOwzAUBuBXOXIXkE6lOM6tGRigdCoMICQkzGASl0bkUjnOULV9d46dUkVI4Cn__x0lTuIDK7pSs5x9GrXbwvpJtkAreJMsgCNccY4QX0v2DvP5zfH1CJyEO4kRgimEBKGDFIFPQRAIBwIhnEJEEDlYIIgpxASxgwgh-QFIqE38nhDSS5tSm7o2Q8gubUZt5toQ4fFlvXZwfjPv8RgiH8QYhA_hGEIf-Bi4D8EYilr1_VJvgL7YHjZVXeeze7-wt6b70vlMCPFr9qMe9Hk2uV0kd-KfWaPL8-hqRfrXKATIMUSBMSaYYub3M_XIP5Uha7RpVFXSTz44l8xudaMly-my1YM1qpZMticaVYPtnvdtwXJrBo1s2JXK6mWl6OYNyzeq7qnVZWU78zAeHH9-Tt8jyp1u" alt="" width="80%" class="inline"/></p>
+<h4><a class="anchor" id="autotoc_md8"></a>
 5</h4>
-<p><b>Sorting a list</b> </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
+<p><b>Sorting a list</b></p>
+<p>The <b>sort</b> function sorts a list in ascending order.</p>
+<div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 <div class="line">head-&gt;value = 11;</div>
 <div class="line">head = append(head,5);</div>
 <div class="line">head = append(head,7);</div>
@@ -183,7 +198,8 @@ Examples</h3>
 <div class="line">display(head);</div>
 </div><!-- fragment --><p> <b>output</b> </p><div class="fragment"><div class="line">[0]:11 -&gt; [1]:5 -&gt; [2]:7 -&gt; [3]:3 -&gt; [4]:9 -&gt; [5]:4 -&gt; [6]:1 -&gt; [7]:8 -&gt; [8]:2 -&gt; NULL</div>
 <div class="line">[0]:1 -&gt; [1]:2 -&gt; [2]:3 -&gt; [3]:4 -&gt; [4]:5 -&gt; [5]:7 -&gt; [6]:8 -&gt; [7]:9 -&gt; [8]:11 -&gt; NULL</div>
-</div><!-- fragment --><p>There are a total of 16 functions in this project. To explore them go to <b>File</b> &gt; <b>File members</b> &gt; <b>Functions</b>.</p>
+</div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp1kT1PwzAQhv_KyV1AukpxnNglAwOUrTCAkJAwg0lcGpGPKnGGqu1_52wDipDwlOd9Xvnk3JGVfWVZwT4Gs9_B5lF3QCd51SyBE1xwjvDwvNlcavYGy-X16eUEnCT3MkdIfwSklKY-VQhyXhckhBcCIfutZ5RmPs0Q-Lyek8jDaAQ1F5KE9GKFkMyFIqG8SBGEF_ENeZijIqgAIkIWgEdIA8gIMkASoWzMOK7tFujfHGBbN02xuAsHRzf0n7ZYCCH-dN-byX535c2VvBX_dCFBjikKzFCiwlUYMvd5uIoha-3QmrqiHR2918ztbGs1K-izs5MbTKOZ7s5UNZPrnw5dyQo3TBbZtK-Ms-va0OUtK7amGSm1Ve364T7uPaz__AW0yYu7" alt="" width="80%" class="inline"/></p>
+<p>There are a total of 16 functions in this project. To explore them go to <b>File</b> &gt; <b>File members</b> &gt; <b>Functions</b>.</p>
 <hr  />
  </div></div><!-- PageDoc -->
 </div><!-- contents -->

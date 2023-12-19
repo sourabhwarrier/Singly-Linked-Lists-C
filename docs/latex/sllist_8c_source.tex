@@ -2,301 +2,301 @@
 \hypertarget{sllist_8c_source}{}\label{sllist_8c_source}\mbox{\hyperlink{sllist_8c}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{sllist_8c_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sllist_8h}{sllist.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00018}\mbox{\hyperlink{sllist_8c_a619920e32f856408625123492ef828bd}{00018}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a619920e32f856408625123492ef828bd}{display}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\%d]:\%d\ -\/>\ "{}},index++,current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}});}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00024}00024\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (current\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}NULL\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00027}00027\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00029}00029\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00037}\mbox{\hyperlink{sllist_8c_a0d910d1026991ace61ce0ab2f122ed56}{00037}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a0d910d1026991ace61ce0ab2f122ed56}{attach}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ new\_value)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ new\_node\ =\ calloc(1,\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structnode}{Node}}));}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00039}00039\ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ new\_value;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00042}00042\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{return}\ new\_node;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00044}00044\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00052}\mbox{\hyperlink{sllist_8c_a926c38b124362ed2a4e52ad40364101c}{00052}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a926c38b124362ed2a4e52ad40364101c}{append}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ new\_value)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ new\_node\ =\ calloc(1,\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structnode}{Node}}));}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00054}00054\ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ new\_value;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ head\ =\ new\_node;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00057}00057\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ new\_node;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00064}00064\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00066}00066\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00073}\mbox{\hyperlink{sllist_8c_a8f3968f1aeae51493c3abb2efd00352d}{00073}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a8f3968f1aeae51493c3abb2efd00352d}{drop\_head}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00074}00074\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ head\_prev\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ free(head\_prev);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00078}00078\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00080}00080\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00081}00081\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00087}\mbox{\hyperlink{sllist_8c_a96268a5ab43d3ed7b0a06370bb0a3a3a}{00087}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a96268a5ab43d3ed7b0a06370bb0a3a3a}{drop\_tail}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{if}(head\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00090}00090\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ free(head);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00094}00094\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_prev;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ current;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ free(current);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ NULL;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00104}00104\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00105}00105\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00106}00106\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00112}\mbox{\hyperlink{sllist_8c_afe5895be3b9dbcb416501df58219aa8b}{00112}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sllist_8c_afe5895be3b9dbcb416501df58219aa8b}{length}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00113}00113\ \ \ \ \ \textcolor{keywordtype}{int}\ len\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00114}00114\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ len++;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00118}00118\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00119}00119\ \ \ \ \ \textcolor{keywordflow}{return}\ len;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00120}00120\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00121}00121\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00128}\mbox{\hyperlink{sllist_8c_a9915f7292e9b51a1bb84332e2dc5468f}{00128}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sllist_8c_a9915f7292e9b51a1bb84332e2dc5468f}{present}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00129}00129\ \ \ \ \ \textcolor{keywordtype}{int}\ found\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00130}00130\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00131}00131\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00137}00137\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{return}\ found;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00139}00139\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00140}00140\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00147}\mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{00147}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{count}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00148}00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{count}}\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00149}00149\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00150}00150\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00151}00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{count}}++;\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00153}00153\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00154}00154\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00155}00155\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00156}00156\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{count}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00157}00157\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00158}00158\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00167}\mbox{\hyperlink{sllist_8c_a53a1069e429315442e6dd071e0175e50}{00167}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a53a1069e429315442e6dd071e0175e50}{replace}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target,\ \textcolor{keywordtype}{int}\ new\_value,\ \textcolor{keywordtype}{int}\ ttl)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00168}00168\ \ \ \ \ \textcolor{keywordtype}{int}\ flag\ =\ (ttl\ >\ 0);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00169}00169\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00170}00170\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00171}00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((flag\ \&\&\ ttl)\ ||\ !flag)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ new\_value;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ttl-\/-\/;\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00176}00176\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00177}00177\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00178}00178\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00179}00179\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00180}00180\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00181}00181\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00189}\mbox{\hyperlink{sllist_8c_a41d63fdad4bc510e8a425ef76f41eeb4}{00189}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a41d63fdad4bc510e8a425ef76f41eeb4}{drop\_matches}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target,\ \textcolor{keywordtype}{int}\ ttl)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00190}00190\ \ \ \ \ \textcolor{keywordtype}{int}\ flag\ =\ (ttl\ >\ 0);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00191}00191\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00192}00192\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_prev;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00193}00193\ \ \ \ \ \textcolor{keywordflow}{if}(current\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00195}00195\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00196}00196\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((flag\ \&\&\ ttl)\ ||\ !flag)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(current);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00202}00202\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00203}00203\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00204}00204\ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00205}00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((flag\ \&\&\ ttl)\ ||\ !flag)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(node\_prev\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(current);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ttl-\/-\/;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(current);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ttl-\/-\/;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ current;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00229}00229\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00230}00230\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00231}00231\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00232}00232\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00233}00233\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00240}\mbox{\hyperlink{sllist_8c_a9c843a08f7e52d3cb23264372abda0bd}{00240}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a9c843a08f7e52d3cb23264372abda0bd}{join}}(\mbox{\hyperlink{structnode}{Node}}*\ head1,\ \mbox{\hyperlink{structnode}{Node}}*\ head2)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00241}00241\ \ \ \ \ \textcolor{keywordflow}{if}(head1\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00242}00242\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ head2;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00243}00243\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00244}00244\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(head2\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00245}00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ head1;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00246}00246\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00247}00247\ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00248}00248\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head1;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00249}00249\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}!=NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00251}00251\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00252}00252\ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ head2;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00253}00253\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00254}00254\ \ \ \ \ \textcolor{keywordflow}{return}\ head1;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00255}00255\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00256}00256\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00263}\mbox{\hyperlink{sllist_8c_a49a6b7e6e893c876bbfe2a6d966e32b5}{00263}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a49a6b7e6e893c876bbfe2a6d966e32b5}{reverse}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ ttl)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00264}00264\ \ \ \ \textcolor{keywordtype}{int}\ flag\ =\ (ttl\ >\ 0);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00265}00265\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00266}00266\ \ \ \ \ \textcolor{keywordflow}{if}\ (ttl\ ==\ 1\ ||\ current\ ==\ NULL\ ||\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00267}00267\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00268}00268\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00269}00269\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_prev\ =\ NULL;\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00270}00270\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_next\ =\ NULL;\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00271}00271\ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00272}00272\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((flag\ \&\&\ ttl>1)\ ||\ !flag)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ node\_next\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(node\_prev\ !=NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ node\_prev;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ current;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ node\_next;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ ttl-\/-\/;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00280}00280\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00281}00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00283}00283\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00284}00284\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00285}00285\ \ \ \ \ head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00286}00286\ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ node\_prev;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00287}00287\ \ \ \ \ \textcolor{keywordflow}{return}\ current;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00288}00288\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00289}00289\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00295}\mbox{\hyperlink{sllist_8c_a6c876b85295a14b19f5e704a5627532a}{00295}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a6c876b85295a14b19f5e704a5627532a}{sort}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{\ \ \ \ \ \ \textcolor{comment}{//IMPLEMENTS\ BUBBLE\ SORT}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00296}00296\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00297}00297\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00298}00298\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00299}00299\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00300}00300\ \ \ \ \ \textcolor{keywordtype}{int}\ temp;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00301}00301\ \ \ \ \ \textcolor{keywordtype}{int}\ swapped\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00302}00302\ \ \ \ \ \textcolor{keywordflow}{do}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00303}00303\ \ \ \ \ \ \ \ \ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00304}00304\ \ \ \ \ \ \ \ \ swapped\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00305}00305\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}>current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}})\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\ =\ current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ temp;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapped\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00313}00313\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00314}00314\ \ \ \ \ \}\textcolor{keywordflow}{while}(swapped);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00315}00315\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00316}00316\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00317}00317\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00324}\mbox{\hyperlink{sllist_8c_a4b6d8fb1c746238e1a0d37a5b567b45a}{00324}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a4b6d8fb1c746238e1a0d37a5b567b45a}{drop\_duplicates}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ max\_duplicates)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00325}00325\ \ \ \ \ \textcolor{keywordtype}{int}\ flag\ =\ (max\_duplicates\ >\ 0);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00326}00326\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00327}00327\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_prev;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00328}00328\ \ \ \ \ \textcolor{keywordtype}{int}\ duplicate\_counter;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00329}00329\ \ \ \ \ \textcolor{keywordflow}{while}(current!=\ NULL\ \&\&\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00330}00330\ \ \ \ \ \ \ \ \ duplicate\_counter\ =\ max\_duplicates;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00331}00331\ \ \ \ \ \ \ \ \ node\_prev\ =\ current;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00332}00332\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_next\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00333}00333\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(node\_next\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ node\_next-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}})\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((flag\ \&\&\ duplicate\_counter==0)\ ||\ !flag)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ node\_next-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(node\_next);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ node\_next;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ duplicate\_counter-\/-\/;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_next\ =\ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ node\_next;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_next\ =\ node\_next-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00349}00349\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00350}00350\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00351}00351\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00352}00352\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00353}00353\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00354}00354\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00360}\mbox{\hyperlink{sllist_8c_a54d751dc32f0e0f69fd003de1954b7a0}{00360}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a54d751dc32f0e0f69fd003de1954b7a0}{del}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00361}00361\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00362}00362\ \ \ \ \ \textcolor{keywordflow}{while}(head\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00363}00363\ \ \ \ \ \ \ \ \ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00364}00364\ \ \ \ \ \ \ \ \ head=head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00365}00365\ \ \ \ \ \ \ \ \ free(current);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00366}00366\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00367}00367\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00368}00368\ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00369}00369\ }
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00377}\mbox{\hyperlink{sllist_8c_a31dede6248f8ac85b82f4ffd562eeb0d}{00377}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a31dede6248f8ac85b82f4ffd562eeb0d}{insert\_after}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target,\ \textcolor{keywordtype}{int}\ new\_value)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00378}00378\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ new\_node\ =\ (\mbox{\hyperlink{structnode}{Node}}*)calloc(1,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structnode}{Node}}));}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00379}00379\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00380}00380\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ temp;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00381}00381\ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ new\_value;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00382}00382\ \ \ \ \ \textcolor{keywordtype}{int}\ inserted\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00383}00383\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00384}00384\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ temp\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ new\_node;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ temp;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ inserted\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00390}00390\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00391}00391\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00392}00392\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00393}00393\ \ \ \ \ \textcolor{keywordflow}{if}\ (!inserted)\{}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00394}00394\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Value\ \%d\ was\ not\ inserted\ :\ expected\ predecessor\ \%d\ not\ found\(\backslash\)n"{}},\ new\_value,\ target);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00395}00395\ \ \ \ \ \ \ \ \ free(new\_node);}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00396}00396\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00397}00397\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
-\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00398}00398\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sllist_8h}{sllist.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00017}\mbox{\hyperlink{sllist_8c_a619920e32f856408625123492ef828bd}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a619920e32f856408625123492ef828bd}{display}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\%d]:\%d\ -\/>\ "{}},index++,current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}});}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{if}\ (current\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}NULL\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00036}\mbox{\hyperlink{sllist_8c_a0d910d1026991ace61ce0ab2f122ed56}{00036}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a0d910d1026991ace61ce0ab2f122ed56}{attach}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ new\_value)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ new\_node\ =\ calloc(1,\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structnode}{Node}}));}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00038}00038\ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ new\_value;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{return}\ new\_node;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00051}\mbox{\hyperlink{sllist_8c_a926c38b124362ed2a4e52ad40364101c}{00051}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a926c38b124362ed2a4e52ad40364101c}{append}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ new\_value)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ new\_node\ =\ calloc(1,\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structnode}{Node}}));}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00053}00053\ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ new\_value;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ head\ =\ new\_node;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ new\_node;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00072}\mbox{\hyperlink{sllist_8c_a8f3968f1aeae51493c3abb2efd00352d}{00072}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a8f3968f1aeae51493c3abb2efd00352d}{drop\_head}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ head\_prev\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ free(head\_prev);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00086}\mbox{\hyperlink{sllist_8c_a96268a5ab43d3ed7b0a06370bb0a3a3a}{00086}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a96268a5ab43d3ed7b0a06370bb0a3a3a}{drop\_tail}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{if}(head\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00090}00090\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ free(head);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_prev;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ current;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ free(current);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00111}\mbox{\hyperlink{sllist_8c_afe5895be3b9dbcb416501df58219aa8b}{00111}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sllist_8c_afe5895be3b9dbcb416501df58219aa8b}{length}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00112}00112\ \ \ \ \ \textcolor{keywordtype}{int}\ len\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00113}00113\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00114}00114\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00115}00115\ \ \ \ \ \ \ \ \ len++;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00118}00118\ \ \ \ \ \textcolor{keywordflow}{return}\ len;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00119}00119\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00127}\mbox{\hyperlink{sllist_8c_a9915f7292e9b51a1bb84332e2dc5468f}{00127}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sllist_8c_a9915f7292e9b51a1bb84332e2dc5468f}{present}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00128}00128\ \ \ \ \ \textcolor{keywordtype}{int}\ found\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00129}00129\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00137}00137\ \ \ \ \ \textcolor{keywordflow}{return}\ found;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00138}00138\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00146}\mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{00146}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{count}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00147}00147\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{count}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00148}00148\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00149}00149\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{count}}++;\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00152}00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00153}00153\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00155}00155\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{sllist_8c_ac37adafe45663700577eea839fdbde45}{count}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00156}00156\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00166}\mbox{\hyperlink{sllist_8c_a53a1069e429315442e6dd071e0175e50}{00166}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a53a1069e429315442e6dd071e0175e50}{replace}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target,\ \textcolor{keywordtype}{int}\ new\_value,\ \textcolor{keywordtype}{int}\ ttl)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00167}00167\ \ \ \ \ \textcolor{keywordtype}{int}\ flag\ =\ (ttl\ >\ 0);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00168}00168\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00169}00169\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00170}00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((flag\ \&\&\ ttl)\ ||\ !flag)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ new\_value;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ttl-\/-\/;\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00175}00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00176}00176\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00177}00177\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00178}00178\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00179}00179\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00188}\mbox{\hyperlink{sllist_8c_a49b586b910159a58dac732575db1095e}{00188}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a49b586b910159a58dac732575db1095e}{drop\_match}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target,\ \textcolor{keywordtype}{int}\ ttl)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00189}00189\ \ \ \ \ \textcolor{keywordtype}{int}\ flag\ =\ (ttl\ >\ 0);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00190}00190\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00191}00191\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_prev;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00192}00192\ \ \ \ \ \textcolor{keywordflow}{if}(current\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00193}00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00194}00194\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00195}00195\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00196}00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((flag\ \&\&\ ttl)\ ||\ !flag)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(current);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00201}00201\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00202}00202\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00203}00203\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00204}00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((flag\ \&\&\ ttl)\ ||\ !flag)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(node\_prev\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(current);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ttl-\/-\/;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(current);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ttl-\/-\/;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ current;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00228}00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00229}00229\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00230}00230\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00231}00231\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00239}\mbox{\hyperlink{sllist_8c_a9c843a08f7e52d3cb23264372abda0bd}{00239}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a9c843a08f7e52d3cb23264372abda0bd}{join}}(\mbox{\hyperlink{structnode}{Node}}*\ head1,\ \mbox{\hyperlink{structnode}{Node}}*\ head2)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00240}00240\ \ \ \ \ \textcolor{keywordflow}{if}(head1\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00241}00241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ head2;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00242}00242\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00243}00243\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(head2\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00244}00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ head1;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00245}00245\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00246}00246\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00247}00247\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head1;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}!=NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00250}00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00251}00251\ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ head2;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00252}00252\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00253}00253\ \ \ \ \ \textcolor{keywordflow}{return}\ head1;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00254}00254\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00262}\mbox{\hyperlink{sllist_8c_a49a6b7e6e893c876bbfe2a6d966e32b5}{00262}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a49a6b7e6e893c876bbfe2a6d966e32b5}{reverse}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ ttl)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00263}00263\ \ \ \ \textcolor{keywordtype}{int}\ flag\ =\ (ttl\ >\ 0);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00264}00264\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00265}00265\ \ \ \ \ \textcolor{keywordflow}{if}\ (ttl\ ==\ 1\ ||\ current\ ==\ NULL\ ||\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00266}00266\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00267}00267\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00268}00268\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_prev\ =\ NULL;\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00269}00269\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_next\ =\ NULL;\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00270}00270\ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00271}00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((flag\ \&\&\ ttl>1)\ ||\ !flag)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ node\_next\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(node\_prev\ !=NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ node\_prev;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ current;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ node\_next;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ ttl-\/-\/;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00279}00279\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00280}00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00282}00282\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00283}00283\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00284}00284\ \ \ \ \ head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00285}00285\ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ node\_prev;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00286}00286\ \ \ \ \ \textcolor{keywordflow}{return}\ current;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00287}00287\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00294}\mbox{\hyperlink{sllist_8c_a6c876b85295a14b19f5e704a5627532a}{00294}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a6c876b85295a14b19f5e704a5627532a}{sort}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{\ \ \ \ \ \ \textcolor{comment}{//BUBBLE\ SORT}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00295}00295\ \ \ \ \ \textcolor{keywordflow}{if}\ (head\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00296}00296\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00297}00297\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00298}00298\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00299}00299\ \ \ \ \ \textcolor{keywordtype}{int}\ temp;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00300}00300\ \ \ \ \ \textcolor{keywordtype}{int}\ swapped\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00301}00301\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00302}00302\ \ \ \ \ \ \ \ \ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00303}00303\ \ \ \ \ \ \ \ \ swapped\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00304}00304\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}>current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}})\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\ =\ current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapped\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00312}00312\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00313}00313\ \ \ \ \ \}\textcolor{keywordflow}{while}(swapped);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00314}00314\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00315}00315\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00323}\mbox{\hyperlink{sllist_8c_a4b6d8fb1c746238e1a0d37a5b567b45a}{00323}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a4b6d8fb1c746238e1a0d37a5b567b45a}{drop\_duplicates}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ max\_duplicates)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00324}00324\ \ \ \ \ \textcolor{keywordtype}{int}\ flag\ =\ (max\_duplicates\ >\ 0);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00325}00325\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00326}00326\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_prev;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00327}00327\ \ \ \ \ \textcolor{keywordtype}{int}\ duplicate\_counter;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00328}00328\ \ \ \ \ \textcolor{keywordflow}{while}(current!=\ NULL\ \&\&\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00329}00329\ \ \ \ \ \ \ \ \ duplicate\_counter\ =\ max\_duplicates;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00330}00330\ \ \ \ \ \ \ \ \ node\_prev\ =\ current;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00331}00331\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ node\_next\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00332}00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(node\_next\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ node\_next-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}})\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((flag\ \&\&\ duplicate\_counter==0)\ ||\ !flag)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ node\_next-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(node\_next);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ node\_next;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ duplicate\_counter-\/-\/;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_next\ =\ node\_prev-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_prev\ =\ node\_next;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_next\ =\ node\_next-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00348}00348\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00349}00349\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00350}00350\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00351}00351\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00352}00352\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00353}00353\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00359}\mbox{\hyperlink{sllist_8c_a54d751dc32f0e0f69fd003de1954b7a0}{00359}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sllist_8c_a54d751dc32f0e0f69fd003de1954b7a0}{del}}(\mbox{\hyperlink{structnode}{Node}}*\ head)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00360}00360\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00361}00361\ \ \ \ \ \textcolor{keywordflow}{while}(head\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00362}00362\ \ \ \ \ \ \ \ \ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00363}00363\ \ \ \ \ \ \ \ \ head=head-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00364}00364\ \ \ \ \ \ \ \ \ free(current);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00365}00365\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00366}00366\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00367}00367\ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00368}00368\ }
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00376}\mbox{\hyperlink{sllist_8c_a31dede6248f8ac85b82f4ffd562eeb0d}{00376}}\ \mbox{\hyperlink{structnode}{Node}}*\ \mbox{\hyperlink{sllist_8c_a31dede6248f8ac85b82f4ffd562eeb0d}{insert\_after}}(\mbox{\hyperlink{structnode}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ target,\ \textcolor{keywordtype}{int}\ new\_value)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00377}00377\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ new\_node\ =\ (\mbox{\hyperlink{structnode}{Node}}*)calloc(1,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structnode}{Node}}));}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00378}00378\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ current\ =\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00379}00379\ \ \ \ \ \mbox{\hyperlink{structnode}{Node}}*\ temp;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00380}00380\ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ =\ new\_value;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00381}00381\ \ \ \ \ \textcolor{keywordtype}{int}\ inserted\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00382}00382\ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00383}00383\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structnode_a1df258d4663fc36cfd0d5d93588aa21f}{value}}\ ==\ target)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00384}00384\ \ \ \ \ \ \ \ \ \ \ \ \ temp\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ new\_node;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ new\_node-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ inserted\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00389}00389\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00390}00390\ \ \ \ \ \ \ \ \ current\ =\ current-\/>\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00391}00391\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00392}00392\ \ \ \ \ \textcolor{keywordflow}{if}\ (!inserted)\{}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00393}00393\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Value\ \%d\ was\ not\ inserted\ :\ expected\ predecessor\ \%d\ not\ found\(\backslash\)n"{}},\ new\_value,\ target);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00394}00394\ \ \ \ \ \ \ \ \ free(new\_node);}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00395}00395\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00396}00396\ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
+\DoxyCodeLine{\Hypertarget{sllist_8c_source_l00397}00397\ \}}
 
 \end{DoxyCode}

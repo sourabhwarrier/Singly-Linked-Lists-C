@@ -5,7 +5,6 @@
  * @date Saturday December 16th, 2023
 */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "sllist.h"
@@ -180,13 +179,13 @@ void replace(Node* head, int target, int new_value, int ttl){
 }
 
 /**
- * Remove the first n nodes with a given value.
+ * Remove the first n nodes that match a given value.
  * @param Node* head : pointer to the head node of a list
  * @param int target : value to be matched and removed
  * @param int ttl : maximum of number of removals to be made
  * @return (Node*) pointer to the head node
 */
-Node* drop_matches(Node* head, int target, int ttl){
+Node* drop_match(Node* head, int target, int ttl){
     int flag = (ttl > 0);
     Node* current = head;
     Node* node_prev;
@@ -292,7 +291,7 @@ Node* reverse(Node* head, int ttl){
  * @param Node* head : pointer to the head node of a list
  * @return void
 */
-void sort(Node* head){      //IMPLEMENTS BUBBLE SORT
+void sort(Node* head){      //BUBBLE SORT
     if (head == NULL){
         return;
     }
