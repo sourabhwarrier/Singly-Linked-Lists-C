@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['in_20c_0',['Linked List Library in C',['../index.html',1,'']]]
+  ['c_0',['An implementation in C',['../index.html',1,'']]]
 ];
