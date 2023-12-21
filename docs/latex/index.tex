@@ -20,7 +20,7 @@ Deleted nodes are marked in red. ‎ ‎ ‎ ‎ ‎ \hypertarget{index_autotoc_
 \DoxyCodeLine{\}\ Node;}
 
 \end{DoxyCode}
- The first node in a list is the head node. In this project, nodes reside in the heap.~\newline
+ The first node in a list is the head. In this project, all nodes reside in the heap.~\newline
 The first node (head) can be created as follows. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Node*\ head\ =\ (Node*)calloc(1,sizeof(Node));}
@@ -31,7 +31,7 @@ The first node (head) can be created as follows.
 \DoxyCodeLine{Node*\ head;}
 
 \end{DoxyCode}
- The former places the head node in the heap with a default value of 0. Deleting the node in this case would require freeing memory ~\newline
+ The former places the head node in the heap with a default value of 0. Deleting the node in this case would require freeing the memory ~\newline
 allocated to it. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{free(head);}
@@ -62,8 +62,8 @@ allocated to it.
 {\bfseries{Appending some nodes to a list}}
 
 The {\bfseries{append}} function has a return type of {\bfseries{Node\texorpdfstring{$\ast$}{*}}}. This is because an empty list can be represented by a NULL pointer too, in which ~\newline
- case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially ~\newline
- changes the head node, hence the head pointer is reassigned when the append function is called.
+ case the function creates a new node with the given value and returns a pointer to the newly created node. This operation potentially ~\newline
+ changes the head node. Therefore, the head pointer is reassigned when the append function is called.
 
 
 \begin{DoxyCode}{0}
@@ -81,7 +81,7 @@ The {\bfseries{append}} function has a return type of {\bfseries{Node\texorpdfst
 
 \end{DoxyCode}
  \hypertarget{index_autotoc_md6}{}\doxyparagraph{\texorpdfstring{3}{3}}\label{index_autotoc_md6}
-{\bfseries{Dropping duplicate from a list}}
+{\bfseries{Dropping duplicates from a list}}
 
 The {\bfseries{drop duplicates}} function has a second parameter, {\itshape max\+\_\+duplicates} which specifies the number of extra copies of a value to retain. ~\newline
  If this value is 0, then each distinct value is retained only once and all copies are dropped.
@@ -161,7 +161,7 @@ The {\bfseries{reverse}} function has a second parameter, {\itshape ttl} which s
  \hypertarget{index_autotoc_md8}{}\doxyparagraph{\texorpdfstring{5}{5}}\label{index_autotoc_md8}
 {\bfseries{Sorting a list}}
 
-The {\bfseries{sort}} function sorts a list in ascending order.
+The {\bfseries{sort}} function sorts a list in ascending order of values.
 
 
 \begin{DoxyCode}{0}
