@@ -91,10 +91,10 @@ The Node Type</h3>
 <div class="line">    int value;</div>
 <div class="line">    struct node* next;</div>
 <div class="line">} Node;</div>
-</div><!-- fragment --><p> The first node in a list is the head node. In this project, nodes reside in the heap.<br  />
+</div><!-- fragment --><p> The first node in a list is the head. In this project, all nodes reside in the heap.<br  />
 The first node (head) can be created as follows. </p><div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 </div><!-- fragment --><p> or </p><div class="fragment"><div class="line">Node* head;</div>
-</div><!-- fragment --><p> The former places the head node in the heap with a default value of 0. Deleting the node in this case would require freeing memory <br  />
+</div><!-- fragment --><p> The former places the head node in the heap with a default value of 0. Deleting the node in this case would require freeing the memory <br  />
 allocated to it. </p><div class="fragment"><div class="line">free(head);</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md3"></a>
 Examples</h3>
@@ -116,8 +116,8 @@ Examples</h3>
 2</h4>
 <p><b>Appending some nodes to a list</b></p>
 <p>The <b>append</b> function has a return type of <b>Node*</b>. This is because an empty list can be represented by a NULL pointer too, in which <br  />
- case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially <br  />
- changes the head node, hence the head pointer is reassigned when the append function is called.</p>
+ case the function creates a new node with the given value and returns a pointer to the newly created node. This operation potentially <br  />
+ changes the head node. Therefore, the head pointer is reassigned when the append function is called.</p>
 <div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 <div class="line">head-&gt;value = 11;</div>
 <div class="line">for (int i = 0;i&lt;10;i++){</div>
@@ -128,7 +128,7 @@ Examples</h3>
 </div><!-- fragment --><p> <img src="https://mermaid.ink/svg/pako:eNp10T1PwzAQBuC_crouIF2lOE6cj4EBylYYQEyYwTQujchHlThDVfrfObsQVUh4ih6_Ot_ljrjpK4slfgxmv4P1k-6AT_SqMYIvuBKCQFxrfIPl8gYEs_AcEchZY9Y4hC9VskqvCUE6a8KaeC0uNWVNQwVFoGZWzMpznBJkM2fMmWfJ6XzmnDkPD3LtYuaCufCsuBER_brwI4owY859P76s1_7qPP6mMeO4slvgv3KAbd005eI-HBrd0H_aciGl_JN9byb7k1W3hbqT_2RBUEySEkpJUUY5FcR9-JcuQ1Goh4StHVpTV7yio7_X6Ha2tRpL_uzs5AbTaNTdiaNmcv3zodtg6YbJEk77yji7qg0Xb7HcmmZktVXt-uHhvPaw_dM3ONSJTQ" alt="" width="100%" class="inline"/></p>
 <h4><a class="anchor" id="autotoc_md6"></a>
 3</h4>
-<p><b>Dropping duplicate from a list</b></p>
+<p><b>Dropping duplicates from a list</b></p>
 <p>The <b>drop duplicates</b> function has a second parameter, <em>max_duplicates</em> which specifies the number of extra copies of a value to retain. <br  />
  If this value is 0, then each distinct value is retained only once and all copies are dropped.</p>
 <div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
@@ -181,7 +181,7 @@ Examples</h3>
 <h4><a class="anchor" id="autotoc_md8"></a>
 5</h4>
 <p><b>Sorting a list</b></p>
-<p>The <b>sort</b> function sorts a list in ascending order.</p>
+<p>The <b>sort</b> function sorts a list in ascending order of values.</p>
 <div class="fragment"><div class="line">Node* head = (Node*)calloc(1,sizeof(Node));</div>
 <div class="line">head-&gt;value = 11;</div>
 <div class="line">head = append(head,5);</div>
