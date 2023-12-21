@@ -21,7 +21,7 @@ typedef struct node{
     struct node* next;
 } Node;
 ```
-The first node in a list is the head node. In this project, nodes reside in the heap.\n
+The first node in a list is the head. In this project, all nodes reside in the heap.\n
 The first node (head) can be created as follows.
 ```
 Node* head = (Node*)calloc(1,sizeof(Node));
@@ -30,7 +30,7 @@ or
 ```
 Node* head;
 ```
-The former places the head node in the heap with a default value of 0. Deleting the node in this case would require freeing memory \n
+The former places the head node in the heap with a default value of 0. Deleting the node in this case would require freeing the memory \n
 allocated to it.
 ```
 free(head);
@@ -63,7 +63,7 @@ int main(void){
 
 **Appending some nodes to a list**
 
-The **append** function has a return type of **Node\***. This is because an empty list can be represented by a NULL pointer too, in which \n case the function creates a new node with the given value and return a pointer to the newly created node. This operation potentially \n changes the head node, hence the head pointer is reassigned when the append function is called.
+The **append** function has a return type of **Node\***. This is because an empty list can be represented by a NULL pointer too, in which \n case the function creates a new node with the given value and returns a pointer to the newly created node. This operation potentially \n changes the head node. Therefore, the head pointer is reassigned when the append function is called.
 
 ```
 Node* head = (Node*)calloc(1,sizeof(Node));
@@ -82,7 +82,7 @@ display(head);
 
 ##### 3
 
-**Dropping duplicate from a list**
+**Dropping duplicates from a list**
 
 The **drop duplicates** function has a second parameter, *max_duplicates* which specifies the number of extra copies of a value to retain. \n If this value is 0, then each distinct value is retained only once and all copies are dropped.
 
@@ -158,7 +158,7 @@ display(head);
 
 **Sorting a list**
 
-The **sort** function sorts a list in ascending order.
+The **sort** function sorts a list in ascending order of values.
 
 ```
 Node* head = (Node*)calloc(1,sizeof(Node));
